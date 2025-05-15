@@ -11,46 +11,38 @@ using System.Windows.Forms;
 
 namespace projeto
 {
-    public partial class MainProgram : Form
+    public partial class Perfil : Form
     {
-        public string user = "", pic = "";
+
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            Perfil perfil = new Perfil(user);
-            perfil.Show();
-        }
-
-        public MainProgram(string nome)
+        public Perfil(string nome)
         {
             InitializeComponent();
-            user = nome;
-            lblname.Text = user;
-
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 string image = "";
+                int id = 0;
                 conn.Open();
 
-                string query = "SELECT Userpic FROM Utilizador WHERE nome = (@nome)";
+                string query = "SELECT Userpic, idutilizador FROM Utilizador WHERE nome = (@nome)";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@nome", user);
+                cmd.Parameters.AddWithValue("@nome", nome);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read()) 
+                if (reader.Read())
                 {
                     image = reader.GetString(reader.GetOrdinal("Userpic"));
+                    id = reader.GetInt32(reader.GetOrdinal("idutilizador"));
                 }
 
                 pictureBox1.ImageLocation = image;
+                lblname.Text = nome;
+                lblId.Text = Convert.ToString(id);
             }
         }
-
-
     }
 }
