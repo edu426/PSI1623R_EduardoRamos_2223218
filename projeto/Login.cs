@@ -24,7 +24,7 @@ namespace projeto
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            string enterUser = "", enterPass = "", user = "", pass = "";
+            string enterUser = "", enterPass = "", user = "", pass = "", pic = "";
 
             enterUser = txtUser.Text;
             enterPass = txtPass.Text;
@@ -48,14 +48,22 @@ namespace projeto
 
                         user = reader.GetString(reader.GetOrdinal("Nome"));
                         pass = reader.GetString(reader.GetOrdinal("Password"));
+                        pic = reader.GetString(reader.GetOrdinal("Userpic"));
 
                         if (enterPass == pass)
                         {
                             MessageBox.Show($"Bem vindo {user}", "Login");
+                            MainProgram main = new MainProgram(user);
+                            main.Show();
+                            this.Close();
+                            
                         }
                         else
                         {
                             MessageBox.Show("Palavra passe errada!", "Login");
+                            Form1 form1 = new Form1();
+                            form1.Show();
+                            this.Close();
                         }
                     }
                     else
@@ -63,7 +71,7 @@ namespace projeto
                         MessageBox.Show("Utilizador não encontrado!", "Login");
                     }
 
-                    MessageBox.Show($"Enter:{enterUser} {enterPass}\nDatabase:{user} {pass}", "Debug Text");
+                    MessageBox.Show($"Enter:{enterUser} {enterPass}\nDatabase:{user} {pass} {pic}", "Debug Text");
                     conn.Close();
                         
                 }

@@ -54,15 +54,17 @@ namespace projeto
                         {
                             dr.Close();
 
-                            query = "INSERT INTO Utilizador (nome, password) VALUES (@nome, @pass)";
+                            query = "INSERT INTO Utilizador (nome, password, userpic) VALUES (@nome, @pass, @pic)";
 
                             SqlCommand cmd2 = new SqlCommand(query, conn);
 
                             cmd2.Parameters.AddWithValue("@nome", nome);
                             cmd2.Parameters.AddWithValue("@pass", pass);
+                            cmd2.Parameters.AddWithValue("@pic", "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png");
                             cmd2.ExecuteNonQuery();
 
                             MessageBox.Show("Utilizador registrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
                         }
                     }
 
