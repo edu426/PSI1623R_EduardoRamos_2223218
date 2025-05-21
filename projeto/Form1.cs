@@ -17,17 +17,45 @@ namespace projeto
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click_1(object sender, EventArgs e)
         {
+            this.Hide();
             Login login = new Login();
+
+            login.FormClosed += (s, args) =>
+            {
+                if (Application.OpenForms.OfType<MainProgram>().Any())
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Show();
+                }
+            };
+
             login.Show();
+
+
         }
 
         private void btnSign_Click(object sender, EventArgs e)
         {
+            this.Hide();
             SignIn signIn = new SignIn();
-            signIn.Show();
+            signIn.ShowDialog();
+            this.Show();
 
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

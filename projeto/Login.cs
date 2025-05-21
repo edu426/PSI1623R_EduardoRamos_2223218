@@ -21,10 +21,29 @@ namespace projeto
             InitializeComponent();
         }
 
+        private void chkHide_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkHide.Checked == true)
+            {
+                txtPass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtPass.UseSystemPasswordChar = true;
 
-        private void btnLog_Click(object sender, EventArgs e)
+            }
+        }
+        
+
+        private void close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLog_Click_1(object sender, EventArgs e)
         {
             string enterUser = "", enterPass = "", user = "", pass = "", pic = "";
+            int id = 0;
 
             enterUser = txtUser.Text;
             enterPass = txtPass.Text;
@@ -48,21 +67,20 @@ namespace projeto
 
                         user = reader.GetString(reader.GetOrdinal("Nome"));
                         pass = reader.GetString(reader.GetOrdinal("Password"));
+                        id = reader.GetInt32(reader.GetOrdinal("idutilizador"));
                         pic = reader.GetString(reader.GetOrdinal("Userpic"));
 
                         if (enterPass == pass)
                         {
                             MessageBox.Show($"Bem vindo {user}", "Login");
-                            MainProgram main = new MainProgram(user);
+                            MainProgram main = new MainProgram(id);
                             main.Show();
                             this.Close();
-                            
+
                         }
                         else
                         {
                             MessageBox.Show("Palavra passe errada!", "Login");
-                            Form1 form1 = new Form1();
-                            form1.Show();
                             this.Close();
                         }
                     }
@@ -71,25 +89,35 @@ namespace projeto
                         MessageBox.Show("Utilizador não encontrado!", "Login");
                     }
 
-                    MessageBox.Show($"Enter:{enterUser} {enterPass}\nDatabase:{user} {pass} {pic}", "Debug Text");
+                    MessageBox.Show($"Enter:{enterUser} {enterPass}\nDatabase:{user} {pass} {pic} {id}", "Debug Text");
                     conn.Close();
-                        
+
                 }
-                catch(Exception ex) {
+                catch (Exception ex)
+                {
                     MessageBox.Show($"Erro\n{ex}");
                 }
             }
         }
 
-        private void chkHide_CheckedChanged(object sender, EventArgs e)
+        private void guna2PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
         {
             if (chkHide.Checked == true)
             {
                 txtPass.UseSystemPasswordChar = false;
+                chkHide.Checked = false;
+                guna2CirclePictureBox1.Image = Properties.Resources.view;
             }
             else
             {
                 txtPass.UseSystemPasswordChar = true;
+                chkHide.Checked = true;
+                guna2CirclePictureBox1.Image = Properties.Resources.hide;
 
             }
         }

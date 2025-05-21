@@ -28,136 +28,142 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblname = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainProgram));
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnPerfil = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.close = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnDesejo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnColecao = new Guna.UI2.WinForms.Guna2Button();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // guna2Elipse1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(757, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(48, 51);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // lblname
+            // btnPerfil
             // 
-            this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblname.Location = new System.Drawing.Point(760, 66);
-            this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(45, 16);
-            this.lblname.TabIndex = 1;
-            this.lblname.Text = "name";
+            this.btnPerfil.BorderRadius = 5;
+            this.btnPerfil.CheckedState.Parent = this.btnPerfil;
+            this.btnPerfil.CustomImages.Parent = this.btnPerfil;
+            this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPerfil.ForeColor = System.Drawing.Color.White;
+            this.btnPerfil.HoverState.Parent = this.btnPerfil;
+            this.btnPerfil.Image = global::projeto.Properties.Resources.user;
+            this.btnPerfil.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnPerfil.Location = new System.Drawing.Point(55, 356);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.ShadowDecoration.Parent = this.btnPerfil;
+            this.btnPerfil.Size = new System.Drawing.Size(400, 67);
+            this.btnPerfil.TabIndex = 17;
+            this.btnPerfil.Text = "Perfil";
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
-            // button1
+            // guna2PictureBox1
             // 
-            this.button1.Location = new System.Drawing.Point(55, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(400, 67);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Minha coleção";
-            this.button1.UseVisualStyleBackColor = true;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-23, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(167, 72);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 16;
+            this.guna2PictureBox1.TabStop = false;
             // 
-            // button2
+            // close
             // 
-            this.button2.Location = new System.Drawing.Point(55, 201);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(400, 67);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Adicionar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(791, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close.TabIndex = 15;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // button3
+            // btnDesejo
             // 
-            this.button3.Location = new System.Drawing.Point(55, 330);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(400, 67);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Lista de desejos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnDesejo.BorderRadius = 5;
+            this.btnDesejo.CheckedState.Parent = this.btnDesejo;
+            this.btnDesejo.CustomImages.Parent = this.btnDesejo;
+            this.btnDesejo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDesejo.ForeColor = System.Drawing.Color.White;
+            this.btnDesejo.HoverState.Parent = this.btnDesejo;
+            this.btnDesejo.Image = global::projeto.Properties.Resources.wishlist;
+            this.btnDesejo.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnDesejo.Location = new System.Drawing.Point(55, 271);
+            this.btnDesejo.Name = "btnDesejo";
+            this.btnDesejo.ShadowDecoration.Parent = this.btnDesejo;
+            this.btnDesejo.Size = new System.Drawing.Size(400, 67);
+            this.btnDesejo.TabIndex = 10;
+            this.btnDesejo.Text = "Lista de Desejos";
             // 
-            // pictureBox2
+            // btnAdd
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.ImageLocation = "https://icons-for-free.com/iff/png/512/controller+game+icon-1320184116909441864.p" +
-    "ng";
-            this.pictureBox2.Location = new System.Drawing.Point(71, 96);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
+            this.btnAdd.BorderRadius = 5;
+            this.btnAdd.CheckedState.Parent = this.btnAdd;
+            this.btnAdd.CustomImages.Parent = this.btnAdd;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.HoverState.Parent = this.btnAdd;
+            this.btnAdd.Image = global::projeto.Properties.Resources.add;
+            this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAdd.Location = new System.Drawing.Point(55, 180);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
+            this.btnAdd.Size = new System.Drawing.Size(400, 67);
+            this.btnAdd.TabIndex = 9;
+            this.btnAdd.Text = "Adicionar";
             // 
-            // pictureBox3
+            // btnColecao
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.ImageLocation = "https://cdn-icons-png.flaticon.com/512/4175/4175178.png";
-            this.pictureBox3.Location = new System.Drawing.Point(71, 346);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.ImageLocation = "https://images.icon-icons.com/1206/PNG/512/1491254405-plusaddmoredetail_82972.png" +
-    "";
-            this.pictureBox4.Location = new System.Drawing.Point(71, 217);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(44, 44);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
+            this.btnColecao.BorderRadius = 5;
+            this.btnColecao.CheckedState.Parent = this.btnColecao;
+            this.btnColecao.CustomImages.Parent = this.btnColecao;
+            this.btnColecao.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnColecao.ForeColor = System.Drawing.Color.White;
+            this.btnColecao.HoverState.Parent = this.btnColecao;
+            this.btnColecao.Image = global::projeto.Properties.Resources.game_controller;
+            this.btnColecao.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnColecao.Location = new System.Drawing.Point(55, 85);
+            this.btnColecao.Name = "btnColecao";
+            this.btnColecao.ShadowDecoration.Parent = this.btnColecao;
+            this.btnColecao.Size = new System.Drawing.Size(400, 67);
+            this.btnColecao.TabIndex = 8;
+            this.btnColecao.Text = "Minha Coleção";
             // 
             // MainProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 500);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lblname);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.btnPerfil);
+            this.Controls.Add(this.guna2PictureBox1);
+            this.Controls.Add(this.close);
+            this.Controls.Add(this.btnDesejo);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnColecao);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainProgram";
             this.Text = "MainProgram";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblname;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Button btnColecao;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2Button btnDesejo;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox close;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnPerfil;
     }
 }

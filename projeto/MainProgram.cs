@@ -13,20 +13,25 @@ namespace projeto
 {
     public partial class MainProgram : Form
     {
-        public string user = "", pic = "";
+        int id = 0;
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void close_Click(object sender, EventArgs e)
         {
-            Perfil perfil = new Perfil(user);
+            this.Close();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Perfil perfil = new Perfil(id);
             perfil.Show();
         }
 
-        public MainProgram(string nome)
+        public MainProgram(int idNumber)
         {
             InitializeComponent();
-            user = nome;
-            lblname.Text = user;
+            id = idNumber;
+            /*lblname.Text = user;
 
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -48,7 +53,7 @@ namespace projeto
                 }
 
                 pictureBox1.ImageLocation = image;
-            }
+            }*/
         }
 
 

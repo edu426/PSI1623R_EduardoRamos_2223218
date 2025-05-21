@@ -28,36 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnSign = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSign = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.close = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(246, 241);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(297, 59);
-            this.btnLogin.TabIndex = 0;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnSign
-            // 
-            this.btnSign.Location = new System.Drawing.Point(246, 306);
-            this.btnSign.Name = "btnSign";
-            this.btnSign.Size = new System.Drawing.Size(297, 59);
-            this.btnSign.TabIndex = 1;
-            this.btnSign.Text = "Sign in";
-            this.btnSign.UseVisualStyleBackColor = true;
-            this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(339, 368);
+            this.label1.Location = new System.Drawing.Point(124, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 2;
@@ -65,34 +54,114 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(214, 217);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Controls.Add(this.btnSign);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(12, 221);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(360, 193);
             this.panel1.TabIndex = 3;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BorderRadius = 8;
+            this.btnLogin.CheckedState.Parent = this.btnLogin;
+            this.btnLogin.CustomImages.Parent = this.btnLogin;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.HoverState.Parent = this.btnLogin;
+            this.btnLogin.Location = new System.Drawing.Point(32, 24);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
+            this.btnLogin.Size = new System.Drawing.Size(297, 59);
+            this.btnLogin.TabIndex = 5;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            // 
+            // btnSign
+            // 
+            this.btnSign.BorderRadius = 8;
+            this.btnSign.CheckedState.Parent = this.btnSign;
+            this.btnSign.CustomImages.Parent = this.btnSign;
+            this.btnSign.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSign.ForeColor = System.Drawing.Color.White;
+            this.btnSign.HoverState.Parent = this.btnSign;
+            this.btnSign.Location = new System.Drawing.Point(32, 89);
+            this.btnSign.Name = "btnSign";
+            this.btnSign.ShadowDecoration.Parent = this.btnSign;
+            this.btnSign.Size = new System.Drawing.Size(297, 59);
+            this.btnSign.TabIndex = 4;
+            this.btnSign.Text = "Sign In";
+            this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.Location = new System.Drawing.Point(-62, 55);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
+            this.guna2PictureBox1.Size = new System.Drawing.Size(491, 184);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 6;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.Click += new System.EventHandler(this.guna2PictureBox1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(8, 40);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 21);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Welcome To";
+            // 
+            // close
+            // 
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(530, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close.TabIndex = 8;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 500);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSign);
-            this.Controls.Add(this.btnLogin);
+            this.ClientSize = new System.Drawing.Size(556, 460);
+            this.Controls.Add(this.close);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "LoginPage";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button btnSign;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSign;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2PictureBox close;
     }
 }
 

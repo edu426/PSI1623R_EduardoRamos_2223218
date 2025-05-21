@@ -15,34 +15,38 @@ namespace projeto
     {
 
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
-        public Perfil(string nome)
+        public Perfil(int id)
         {
             InitializeComponent();
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string image = "";
-                int id = 0;
+                string image = "", nome = "";
                 conn.Open();
 
-                string query = "SELECT Userpic, idutilizador FROM Utilizador WHERE nome = (@nome)";
+                string query = "SELECT Userpic, nome FROM Utilizador WHERE idutilizador = (@id)";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@nome", nome);
+                cmd.Parameters.AddWithValue("@id", id);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 if (reader.Read())
                 {
                     image = reader.GetString(reader.GetOrdinal("Userpic"));
-                    id = reader.GetInt32(reader.GetOrdinal("idutilizador"));
+                    nome = reader.GetString(reader.GetOrdinal("nome"));
                 }
 
                 pictureBox1.ImageLocation = image;
                 lblname.Text = nome;
                 lblId.Text = Convert.ToString(id);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

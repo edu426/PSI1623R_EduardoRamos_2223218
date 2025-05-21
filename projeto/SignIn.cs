@@ -19,7 +19,8 @@ namespace projeto
         }
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
 
-        private void btnSign_Click(object sender, EventArgs e)
+
+        private void btnSign_Click_1(object sender, EventArgs e)
         {
             string nome = "", pass = "", conPass = "";
 
@@ -35,7 +36,7 @@ namespace projeto
                     {
                         MessageBox.Show("Valores Inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else 
+                    else
                     {
                         conn.Open();
 
@@ -75,6 +76,11 @@ namespace projeto
 
                 }
             }
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
