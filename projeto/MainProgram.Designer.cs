@@ -119,6 +119,7 @@
             this.btnAdd.Size = new System.Drawing.Size(400, 67);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Adicionar";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnColecao
             // 
@@ -136,6 +137,7 @@
             this.btnColecao.Size = new System.Drawing.Size(400, 67);
             this.btnColecao.TabIndex = 8;
             this.btnColecao.Text = "Minha Coleção";
+            this.btnColecao.Click += new System.EventHandler(this.btnColecao_Click);
             // 
             // MainProgram
             // 

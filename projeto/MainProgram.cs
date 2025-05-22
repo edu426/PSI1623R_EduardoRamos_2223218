@@ -18,12 +18,19 @@ namespace projeto
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Perfil perfil = new Perfil(id);
+
+            perfil.FormClosed += (s, args) =>
+            {
+                 this.Show();
+            };
+
             perfil.Show();
         }
 
@@ -56,6 +63,16 @@ namespace projeto
             }*/
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Adicionar adicionar = new Adicionar();
+            adicionar.Show();
+        }
 
+        private void btnColecao_Click(object sender, EventArgs e)
+        {
+            MinhaColecao minha = new MinhaColecao();
+            minha.Show();
+        }
     }
 }

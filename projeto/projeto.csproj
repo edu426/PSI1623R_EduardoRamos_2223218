@@ -51,6 +51,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adicionar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adicionar.Designer.cs">
+      <DependentUpon>Adicionar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarColecao.Designer.cs">
+      <DependentUpon>AdicionarColecao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdicionarWish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdicionarWish.Designer.cs">
+      <DependentUpon>AdicionarWish.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeName.Designer.cs">
+      <DependentUpon>ChangeName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePhoto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePhoto.Designer.cs">
+      <DependentUpon>ChangePhoto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="collectionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collectionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="collectionDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collectionDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="collectionDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collectionDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +114,12 @@
     <Compile Include="MainProgram.Designer.cs">
       <DependentUpon>MainProgram.cs</DependentUpon>
     </Compile>
+    <Compile Include="MinhaColecao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MinhaColecao.Designer.cs">
+      <DependentUpon>MinhaColecao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Perfil.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +134,18 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Adicionar.resx">
+      <DependentUpon>Adicionar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarColecao.resx">
+      <DependentUpon>AdicionarColecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeName.resx">
+      <DependentUpon>ChangeName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangePhoto.resx">
+      <DependentUpon>ChangePhoto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainProgram.resx">
       <DependentUpon>MainProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MinhaColecao.resx">
+      <DependentUpon>MinhaColecao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Perfil.resx">
       <DependentUpon>Perfil.cs</DependentUpon>
@@ -108,6 +174,39 @@
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="collectionDataSet.xsc">
+      <DependentUpon>collectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>collectionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="collectionDataSet.xss">
+      <DependentUpon>collectionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet1.xsc">
+      <DependentUpon>collectionDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>collectionDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="collectionDataSet1.xss">
+      <DependentUpon>collectionDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet2.xsc">
+      <DependentUpon>collectionDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>collectionDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="collectionDataSet2.xss">
+      <DependentUpon>collectionDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

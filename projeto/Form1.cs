@@ -43,8 +43,20 @@ namespace projeto
         {
             this.Hide();
             SignIn signIn = new SignIn();
-            signIn.ShowDialog();
-            this.Show();
+
+            signIn.FormClosed += (s, args) =>
+            {
+                if (Application.OpenForms.OfType<MainProgram>().Any())
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Show();
+                }
+            };
+
+            signIn.Show();
 
         }
 
@@ -55,7 +67,7 @@ namespace projeto
 
         private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

@@ -28,100 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfil));
             this.lblname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnNome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFoto = new Guna.UI2.WinForms.Guna2Button();
+            this.close = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(37, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // lblname
             // 
             this.lblname.AutoSize = true;
-            this.lblname.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblname.Location = new System.Drawing.Point(114, 165);
+            this.lblname.Location = new System.Drawing.Point(237, 107);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(69, 25);
+            this.lblname.Size = new System.Drawing.Size(67, 30);
             this.lblname.TabIndex = 2;
             this.lblname.Text = "name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 165);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(156, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 25);
+            this.label1.Size = new System.Drawing.Size(75, 30);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 205);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(157, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 25);
+            this.label2.Size = new System.Drawing.Size(39, 30);
             this.label2.TabIndex = 4;
             this.label2.Text = "ID:";
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblId.Location = new System.Drawing.Point(114, 205);
+            this.lblId.Location = new System.Drawing.Point(237, 153);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(31, 25);
+            this.lblId.Size = new System.Drawing.Size(32, 30);
             this.lblId.TabIndex = 5;
             this.lblId.Text = "id";
             // 
-            // button1
+            // guna2Elipse1
             // 
-            this.button1.Location = new System.Drawing.Point(227, 78);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 57);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Mudar nome";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.guna2Elipse1.TargetControl = this;
             // 
-            // button2
+            // btnNome
             // 
-            this.button2.Location = new System.Drawing.Point(227, 152);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 57);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Mudar foto de perfil";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnNome.BorderRadius = 8;
+            this.btnNome.CheckedState.Parent = this.btnNome;
+            this.btnNome.CustomImages.Parent = this.btnNome;
+            this.btnNome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNome.ForeColor = System.Drawing.Color.White;
+            this.btnNome.HoverState.Parent = this.btnNome;
+            this.btnNome.Location = new System.Drawing.Point(24, 254);
+            this.btnNome.Name = "btnNome";
+            this.btnNome.ShadowDecoration.Parent = this.btnNome;
+            this.btnNome.Size = new System.Drawing.Size(172, 57);
+            this.btnNome.TabIndex = 16;
+            this.btnNome.Text = "Mudar Nome";
+            this.btnNome.Click += new System.EventHandler(this.btnNome_Click);
+            // 
+            // btnFoto
+            // 
+            this.btnFoto.BorderRadius = 8;
+            this.btnFoto.CheckedState.Parent = this.btnFoto;
+            this.btnFoto.CustomImages.Parent = this.btnFoto;
+            this.btnFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnFoto.ForeColor = System.Drawing.Color.White;
+            this.btnFoto.HoverState.Parent = this.btnFoto;
+            this.btnFoto.Location = new System.Drawing.Point(242, 254);
+            this.btnFoto.Name = "btnFoto";
+            this.btnFoto.ShadowDecoration.Parent = this.btnFoto;
+            this.btnFoto.Size = new System.Drawing.Size(172, 57);
+            this.btnFoto.TabIndex = 18;
+            this.btnFoto.Text = "Mudar foto de perfil";
+            this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
+            // 
+            // close
+            // 
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(411, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close.TabIndex = 15;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(27, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(108, 117);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 344);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnFoto);
+            this.Controls.Add(this.btnNome);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Perfil";
             this.Text = "Perfil";
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -135,7 +172,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox close;
+        private Guna.UI2.WinForms.Guna2Button btnNome;
+        private Guna.UI2.WinForms.Guna2Button btnFoto;
     }
 }

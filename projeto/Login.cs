@@ -75,7 +75,7 @@ namespace projeto
                             MessageBox.Show($"Bem vindo {user}", "Login");
                             MainProgram main = new MainProgram(id);
                             main.Show();
-                            this.Close();
+                            this.Hide();
 
                         }
                         else
