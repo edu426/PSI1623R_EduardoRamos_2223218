@@ -35,7 +35,7 @@ namespace projeto
                     if (conPass != pass || nome == "" || pass == "" || conPass == "")
                     {
                         MessageBox.Show("Valores Inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    } 
                     else
                     {
                         conn.Open();

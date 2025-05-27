@@ -31,23 +31,33 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.txtJogo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.comboGenero = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.collectionDataSet1 = new projeto.collectionDataSet1();
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.collectionDataSet1 = new projeto.collectionDataSet1();
             this.generoTableAdapter = new projeto.collectionDataSet1TableAdapters.GeneroTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboPlataforma = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.collectionDataSet2 = new projeto.collectionDataSet2();
             this.plataformasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.collectionDataSet2 = new projeto.collectionDataSet2();
             this.plataformasTableAdapter = new projeto.collectionDataSet2TableAdapters.PlataformasTableAdapter();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtImagem = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnCon = new Guna.UI2.WinForms.Guna2Button();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet1)).BeginInit();
+            this.comboPlat = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.plataformasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.collectionDataSet3 = new projeto.collectionDataSet3();
+            this.comboGen = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.plataformasTableAdapter1 = new projeto.collectionDataSet3TableAdapters.PlataformasTableAdapter();
+            this.collectionDataSet4 = new projeto.collectionDataSet4();
+            this.generoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.generoTableAdapter1 = new projeto.collectionDataSet4TableAdapters.GeneroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -72,9 +82,11 @@
             this.txtJogo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtJogo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJogo.FocusedState.Parent = this.txtJogo;
+            this.txtJogo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtJogo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtJogo.HoverState.Parent = this.txtJogo;
             this.txtJogo.Location = new System.Drawing.Point(39, 90);
+            this.txtJogo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtJogo.Name = "txtJogo";
             this.txtJogo.PasswordChar = '\0';
             this.txtJogo.PlaceholderText = "Nome";
@@ -83,37 +95,15 @@
             this.txtJogo.Size = new System.Drawing.Size(396, 36);
             this.txtJogo.TabIndex = 3;
             // 
-            // comboGenero
+            // generoBindingSource
             // 
-            this.comboGenero.BackColor = System.Drawing.Color.Transparent;
-            this.comboGenero.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.generoBindingSource, "IdGenero", true));
-            this.comboGenero.DataSource = this.generoBindingSource;
-            this.comboGenero.DisplayMember = "NomeGenero";
-            this.comboGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboGenero.FocusedColor = System.Drawing.Color.Empty;
-            this.comboGenero.FocusedState.Parent = this.comboGenero;
-            this.comboGenero.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboGenero.FormattingEnabled = true;
-            this.comboGenero.HoverState.Parent = this.comboGenero;
-            this.comboGenero.ItemHeight = 30;
-            this.comboGenero.ItemsAppearance.Parent = this.comboGenero;
-            this.comboGenero.Location = new System.Drawing.Point(39, 161);
-            this.comboGenero.Name = "comboGenero";
-            this.comboGenero.ShadowDecoration.Parent = this.comboGenero;
-            this.comboGenero.Size = new System.Drawing.Size(267, 36);
-            this.comboGenero.TabIndex = 4;
+            this.generoBindingSource.DataMember = "Genero";
+            this.generoBindingSource.DataSource = this.collectionDataSet1;
             // 
             // collectionDataSet1
             // 
             this.collectionDataSet1.DataSetName = "collectionDataSet1";
             this.collectionDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // generoBindingSource
-            // 
-            this.generoBindingSource.DataMember = "Genero";
-            this.generoBindingSource.DataSource = this.collectionDataSet1;
             // 
             // generoTableAdapter
             // 
@@ -129,37 +119,15 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Genero";
             // 
-            // comboPlataforma
+            // plataformasBindingSource
             // 
-            this.comboPlataforma.BackColor = System.Drawing.Color.Transparent;
-            this.comboPlataforma.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.plataformasBindingSource, "IdPlataforma", true));
-            this.comboPlataforma.DataSource = this.plataformasBindingSource;
-            this.comboPlataforma.DisplayMember = "NomePlataforma";
-            this.comboPlataforma.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.comboPlataforma.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboPlataforma.FocusedColor = System.Drawing.Color.Empty;
-            this.comboPlataforma.FocusedState.Parent = this.comboPlataforma;
-            this.comboPlataforma.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboPlataforma.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.comboPlataforma.FormattingEnabled = true;
-            this.comboPlataforma.HoverState.Parent = this.comboPlataforma;
-            this.comboPlataforma.ItemHeight = 30;
-            this.comboPlataforma.ItemsAppearance.Parent = this.comboPlataforma;
-            this.comboPlataforma.Location = new System.Drawing.Point(345, 161);
-            this.comboPlataforma.Name = "comboPlataforma";
-            this.comboPlataforma.ShadowDecoration.Parent = this.comboPlataforma;
-            this.comboPlataforma.Size = new System.Drawing.Size(267, 36);
-            this.comboPlataforma.TabIndex = 6;
+            this.plataformasBindingSource.DataMember = "Plataformas";
+            this.plataformasBindingSource.DataSource = this.collectionDataSet2;
             // 
             // collectionDataSet2
             // 
             this.collectionDataSet2.DataSetName = "collectionDataSet2";
             this.collectionDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // plataformasBindingSource
-            // 
-            this.plataformasBindingSource.DataMember = "Plataformas";
-            this.plataformasBindingSource.DataSource = this.collectionDataSet2;
             // 
             // plataformasTableAdapter
             // 
@@ -197,9 +165,11 @@
             this.txtImagem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtImagem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImagem.FocusedState.Parent = this.txtImagem;
+            this.txtImagem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtImagem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtImagem.HoverState.Parent = this.txtImagem;
             this.txtImagem.Location = new System.Drawing.Point(39, 259);
+            this.txtImagem.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtImagem.Name = "txtImagem";
             this.txtImagem.PasswordChar = '\0';
             this.txtImagem.PlaceholderText = "URL da imagem";
@@ -223,27 +193,105 @@
             this.btnCon.Text = "Confirmar";
             this.btnCon.Click += new System.EventHandler(this.btnCon_Click);
             // 
+            // comboPlat
+            // 
+            this.comboPlat.BackColor = System.Drawing.Color.Transparent;
+            this.comboPlat.BorderRadius = 5;
+            this.comboPlat.DataSource = this.plataformasBindingSource1;
+            this.comboPlat.DisplayMember = "NomePlataforma";
+            this.comboPlat.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboPlat.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboPlat.FocusedColor = System.Drawing.Color.Empty;
+            this.comboPlat.FocusedState.Parent = this.comboPlat;
+            this.comboPlat.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboPlat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboPlat.FormattingEnabled = true;
+            this.comboPlat.HoverState.Parent = this.comboPlat;
+            this.comboPlat.ItemHeight = 30;
+            this.comboPlat.ItemsAppearance.Parent = this.comboPlat;
+            this.comboPlat.Location = new System.Drawing.Point(345, 161);
+            this.comboPlat.Name = "comboPlat";
+            this.comboPlat.ShadowDecoration.Parent = this.comboPlat;
+            this.comboPlat.Size = new System.Drawing.Size(265, 36);
+            this.comboPlat.TabIndex = 14;
+            this.comboPlat.ValueMember = "IdPlataforma";
+            // 
+            // plataformasBindingSource1
+            // 
+            this.plataformasBindingSource1.DataMember = "Plataformas";
+            this.plataformasBindingSource1.DataSource = this.collectionDataSet3;
+            // 
+            // collectionDataSet3
+            // 
+            this.collectionDataSet3.DataSetName = "collectionDataSet3";
+            this.collectionDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // comboGen
+            // 
+            this.comboGen.BackColor = System.Drawing.Color.Transparent;
+            this.comboGen.BorderRadius = 5;
+            this.comboGen.DataSource = this.generoBindingSource1;
+            this.comboGen.DisplayMember = "NomeGenero";
+            this.comboGen.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboGen.FocusedColor = System.Drawing.Color.Empty;
+            this.comboGen.FocusedState.Parent = this.comboGen;
+            this.comboGen.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboGen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboGen.FormattingEnabled = true;
+            this.comboGen.HoverState.Parent = this.comboGen;
+            this.comboGen.ItemHeight = 30;
+            this.comboGen.ItemsAppearance.Parent = this.comboGen;
+            this.comboGen.Location = new System.Drawing.Point(39, 161);
+            this.comboGen.Name = "comboGen";
+            this.comboGen.ShadowDecoration.Parent = this.comboGen;
+            this.comboGen.Size = new System.Drawing.Size(265, 36);
+            this.comboGen.TabIndex = 15;
+            this.comboGen.ValueMember = "IdGenero";
+            // 
+            // plataformasTableAdapter1
+            // 
+            this.plataformasTableAdapter1.ClearBeforeFill = true;
+            // 
+            // collectionDataSet4
+            // 
+            this.collectionDataSet4.DataSetName = "collectionDataSet4";
+            this.collectionDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // generoBindingSource1
+            // 
+            this.generoBindingSource1.DataMember = "Genero";
+            this.generoBindingSource1.DataSource = this.collectionDataSet4;
+            // 
+            // generoTableAdapter1
+            // 
+            this.generoTableAdapter1.ClearBeforeFill = true;
+            // 
             // AdicionarColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboGen);
+            this.Controls.Add(this.comboPlat);
             this.Controls.Add(this.btnCon);
             this.Controls.Add(this.txtImagem);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboPlataforma);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboGenero);
             this.Controls.Add(this.txtJogo);
             this.Controls.Add(this.label1);
             this.Name = "AdicionarColecao";
             this.Text = "AdicionarColecao";
             this.Load += new System.EventHandler(this.AdicionarColecao_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -253,12 +301,10 @@
 
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtJogo;
-        private Guna.UI2.WinForms.Guna2ComboBox comboGenero;
         private collectionDataSet1 collectionDataSet1;
         private System.Windows.Forms.BindingSource generoBindingSource;
         private collectionDataSet1TableAdapters.GeneroTableAdapter generoTableAdapter;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox comboPlataforma;
         private collectionDataSet2 collectionDataSet2;
         private System.Windows.Forms.BindingSource plataformasBindingSource;
         private collectionDataSet2TableAdapters.PlataformasTableAdapter plataformasTableAdapter;
@@ -266,5 +312,13 @@
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtImagem;
         private Guna.UI2.WinForms.Guna2Button btnCon;
+        private Guna.UI2.WinForms.Guna2ComboBox comboPlat;
+        private Guna.UI2.WinForms.Guna2ComboBox comboGen;
+        private collectionDataSet3 collectionDataSet3;
+        private System.Windows.Forms.BindingSource plataformasBindingSource1;
+        private collectionDataSet3TableAdapters.PlataformasTableAdapter plataformasTableAdapter1;
+        private collectionDataSet4 collectionDataSet4;
+        private System.Windows.Forms.BindingSource generoBindingSource1;
+        private collectionDataSet4TableAdapters.GeneroTableAdapter generoTableAdapter1;
     }
 }
