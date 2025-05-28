@@ -13,10 +13,13 @@ namespace projeto
 {
     public partial class AdicionarColecao : Form
     {
-        public AdicionarColecao()
+        public AdicionarColecao(int id)
         {
             InitializeComponent();
+            userid = id;
         }
+
+        public int userid = 0;  
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
 
         private void AdicionarColecao_Load(object sender, EventArgs e)
@@ -52,9 +55,10 @@ namespace projeto
                     {
                         conn.Open();
 
-                        string query = "SELECT nome FROM Jogoscolecao WHERE titulo = @nome";
+                        string query = "SELECT titulo FROM Jogoscolecao WHERE titulo = @titulo AND userid = @id";
                         SqlCommand cmd = new SqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@nome", nome);
+                        cmd.Parameters.AddWithValue("@titulo", nome);
+                        cmd.Parameters.AddWithValue("@id", userid);
 
                         SqlDataReader dr = cmd.ExecuteReader();
 
@@ -67,16 +71,25 @@ namespace projeto
                         {
                             dr.Close();
 
-                            query = "INSERT INTO Jogoscolecao (titulo, userid, userpic) VALUES (@nome, @pass, @pic)";
+                            query = "INSERT INTO Jogoscolecao (titulo, userid, genero, plataformaid, gamepic) VALUES (@titulo, @userid, @genero, @platform, @pic)";
 
                             SqlCommand cmd2 = new SqlCommand(query, conn);
 
-                            cmd2.Parameters.AddWithValue("@nome", nome);
-                            cmd2.Parameters.AddWithValue("@pass", pass);
-                            cmd2.Parameters.AddWithValue("@pic", "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png");
+                            cmd2.Parameters.AddWithValue("@titulo", nome);
+                            cmd2.Parameters.AddWithValue("@userid", userid);
+                            cmd2.Parameters.AddWithValue("@genero", genero);
+                            cmd2.Parameters.AddWithValue("@platform", plataforma);
+                            if (pic == "")
+                            {
+                                cmd2.Parameters.AddWithValue("@pic", "https://demofree.sirv.com/nope-not-here.jpg");
+                            }
+                            else
+                            {
+                                cmd2.Parameters.AddWithValue("@pic", pic);
+                            }
                             cmd2.ExecuteNonQuery();
 
-                            MessageBox.Show("Utilizador registrado!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Jogo adicionado a coleção!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();
                         }
                     }

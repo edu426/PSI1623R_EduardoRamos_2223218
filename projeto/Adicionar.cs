@@ -12,20 +12,22 @@ namespace projeto
 {
     public partial class Adicionar : Form
     {
-        public Adicionar()
+        public int id = 0;
+        public Adicionar(int userid)
         {
             InitializeComponent();
+            id = userid;
         }
 
         private void btnJogo_Click(object sender, EventArgs e)
         {
-            AdicionarColecao colecao = new AdicionarColecao();
+            AdicionarColecao colecao = new AdicionarColecao(id);
             colecao.Show();
         }
 
         private void btnDesejo_Click_1(object sender, EventArgs e)
         {
-            AdicionarWish wish = new AdicionarWish();
+            AdicionarWish wish = new AdicionarWish(id);
             wish.Show();
         }
     }

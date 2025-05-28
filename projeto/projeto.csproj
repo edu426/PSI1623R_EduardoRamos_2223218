@@ -109,6 +109,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>collectionDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="collectionDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collectionDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="collectionDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>collectionDataSet6.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdicionarColecao.resx">
       <DependentUpon>AdicionarColecao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdicionarWish.resx">
+      <DependentUpon>AdicionarWish.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeName.resx">
       <DependentUpon>ChangeName.cs</DependentUpon>
@@ -241,6 +254,28 @@
     </None>
     <None Include="collectionDataSet4.xss">
       <DependentUpon>collectionDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet5.xsc">
+      <DependentUpon>collectionDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>collectionDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="collectionDataSet5.xss">
+      <DependentUpon>collectionDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet6.xsc">
+      <DependentUpon>collectionDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="collectionDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>collectionDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="collectionDataSet6.xss">
+      <DependentUpon>collectionDataSet6.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
