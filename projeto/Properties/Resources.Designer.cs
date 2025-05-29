@@ -73,6 +73,16 @@ namespace projeto.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ChatGPT_Image_29_05_2025__11_37_13 {
+            get {
+                object obj = ResourceManager.GetObject("ChatGPT Image 29_05_2025, 11_37_13", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap game_controller {
             get {
                 object obj = ResourceManager.GetObject("game-controller", resourceCulture);

@@ -18,10 +18,16 @@ namespace projeto
         public Perfil(int id)
         {
             InitializeComponent();
+            idNumber = id;
+            Refresh.Hide();
+            UpdateProfile();
+        }
+
+        private void UpdateProfile()
+        {
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                idNumber = id;
                 string image = "", nome = "";
                 conn.Open();
 
@@ -29,7 +35,7 @@ namespace projeto
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@id", idNumber);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -41,7 +47,7 @@ namespace projeto
 
                 pictureBox1.ImageLocation = image;
                 lblname.Text = nome;
-                lblId.Text = Convert.ToString(id);
+                lblId.Text = Convert.ToString(idNumber);
             }
         }
 
@@ -53,13 +59,28 @@ namespace projeto
         private void btnNome_Click(object sender, EventArgs e)
         {
             ChangeName changeName = new ChangeName(idNumber);
+            changeName.FormClosed += (s, args) =>
+            {
+                UpdateProfile();
+            };
             changeName.Show();
+
         }
 
         private void btnFoto_Click(object sender, EventArgs e)
         {
             ChangePhoto changePhoto = new ChangePhoto(idNumber);
+            changePhoto.FormClosed += (s, args) =>
+            {
+                UpdateProfile();
+            };
             changePhoto.Show();
+        }
+
+        //nao vou usar aqui mas devo usar depois
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            UpdateProfile();
         }
     }
 }

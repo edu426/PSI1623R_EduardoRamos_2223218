@@ -71,7 +71,7 @@ namespace projeto
 
         private void btnColecao_Click(object sender, EventArgs e)
         {
-            MinhaColecao minha = new MinhaColecao();
+            MinhaColecao minha = new MinhaColecao(id);
             minha.Show();
         }
     }

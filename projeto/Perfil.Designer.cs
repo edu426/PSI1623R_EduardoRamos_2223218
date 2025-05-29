@@ -39,8 +39,10 @@
             this.btnFoto = new Guna.UI2.WinForms.Guna2Button();
             this.close = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Refresh = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Refresh)).BeginInit();
             this.SuspendLayout();
             // 
             // lblname
@@ -142,11 +144,25 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // Refresh
+            // 
+            this.Refresh.ImageLocation = "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/refresh-" +
+    "icon.png";
+            this.Refresh.Location = new System.Drawing.Point(391, 12);
+            this.Refresh.Name = "Refresh";
+            this.Refresh.ShadowDecoration.Parent = this.Refresh;
+            this.Refresh.Size = new System.Drawing.Size(14, 18);
+            this.Refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Refresh.TabIndex = 19;
+            this.Refresh.TabStop = false;
+            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
+            // 
             // Perfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 344);
+            this.Controls.Add(this.Refresh);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.btnNome);
             this.Controls.Add(this.close);
@@ -160,6 +176,7 @@
             this.Text = "Perfil";
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Refresh)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +193,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox close;
         private Guna.UI2.WinForms.Guna2Button btnNome;
         private Guna.UI2.WinForms.Guna2Button btnFoto;
+        private Guna.UI2.WinForms.Guna2PictureBox Refresh;
     }
 }
