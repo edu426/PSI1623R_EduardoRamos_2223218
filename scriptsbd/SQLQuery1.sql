@@ -13,6 +13,7 @@ foreign key(Genero) References Genero(IdGenero),
 GamePic varchar(300),
 )
 
+Insert into Jogoscolecao values ('Jogo1',1,1,1,''),('Jogo2',1,1,1,''),('Jogo3',1,1,1,''),('Jogo4',1,1,1,'')
 select * from Jogoscolecao
 drop table Jogoscolecao
  

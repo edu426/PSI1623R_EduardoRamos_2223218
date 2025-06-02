@@ -15,11 +15,9 @@ namespace projeto
     public partial class MinhaColecao : Form
     {
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
-
-        public MinhaColecao(int id)
+        private  int passiveLoop = 0, userId = 0;
+        private void gameRefresh()
         {
-            InitializeComponent();
-
             picBox1.Hide();
             picBox2.Hide();
             picBox3.Hide();
@@ -36,23 +34,28 @@ namespace projeto
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 string image = "", nome = "";
-                int plat = 0, gen = 0, counter = 0;
+                int plat = 0, gen = 0, counter = 0, activeLoop = 0;
                 conn.Open();
 
                 string query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM Jogoscolecao WHERE userid = (@id)";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@id", userId);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read() && counter < 3)
                 {
-                    image = reader.GetString(reader.GetOrdinal("Gamepic"));
-                    nome = reader.GetString(reader.GetOrdinal("Titulo"));
-                    plat = reader.GetInt32(reader.GetOrdinal("plataformaId"));
-                    gen = reader.GetInt32(reader.GetOrdinal("genero"));
+                    if (activeLoop  < passiveLoop + 3)
+                    {
+                        image = reader.GetString(reader.GetOrdinal("Gamepic"));
+                        nome = reader.GetString(reader.GetOrdinal("Titulo"));
+                        plat = reader.GetInt32(reader.GetOrdinal("plataformaId"));
+                        gen = reader.GetInt32(reader.GetOrdinal("genero"));
+                    }
+
+                    activeLoop++;
 
                     switch (counter)
                     {
@@ -65,6 +68,7 @@ namespace projeto
                             lblGen1.Show();
                             lbln1.Show();
                             lblPlat1.Show();
+                            counter++;
                             break;
 
                         case 1:
@@ -76,6 +80,7 @@ namespace projeto
                             lblGen2.Show();
                             lbln2.Show();
                             lblPlat2.Show();
+                            counter++;
                             break;
 
                         case 2:
@@ -87,13 +92,33 @@ namespace projeto
                             lblGen3.Show();
                             lbln3.Show();
                             lblPlat3.Show();
+                            counter++;
                             break;
 
                     }
 
-                    counter++;  
+                    passiveLoop += 3;
                 }
             }
+        }
+
+        public MinhaColecao(int id)
+        {
+            InitializeComponent();
+            userId = id;
+
+            gameRefresh();
+
+        }
+
+        private void picBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            gameRefresh();
         }
     }
 }
