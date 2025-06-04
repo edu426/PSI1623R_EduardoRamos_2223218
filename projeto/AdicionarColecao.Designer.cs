@@ -46,9 +46,9 @@
             this.plataformasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.collectionDataSet3 = new projeto.collectionDataSet3();
             this.comboGen = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.plataformasTableAdapter1 = new projeto.collectionDataSet3TableAdapters.PlataformasTableAdapter();
-            this.collectionDataSet4 = new projeto.collectionDataSet4();
             this.generoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.collectionDataSet4 = new projeto.collectionDataSet4();
+            this.plataformasTableAdapter1 = new projeto.collectionDataSet3TableAdapters.PlataformasTableAdapter();
             this.generoTableAdapter1 = new projeto.collectionDataSet4TableAdapters.GeneroTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet1)).BeginInit();
@@ -56,8 +56,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -207,6 +207,7 @@
             this.comboPlat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboPlat.FormattingEnabled = true;
             this.comboPlat.HoverState.Parent = this.comboPlat;
+            this.comboPlat.IntegralHeight = false;
             this.comboPlat.ItemHeight = 30;
             this.comboPlat.ItemsAppearance.Parent = this.comboPlat;
             this.comboPlat.Location = new System.Drawing.Point(345, 161);
@@ -240,28 +241,30 @@
             this.comboGen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboGen.FormattingEnabled = true;
             this.comboGen.HoverState.Parent = this.comboGen;
+            this.comboGen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboGen.IntegralHeight = false;
             this.comboGen.ItemHeight = 30;
             this.comboGen.ItemsAppearance.Parent = this.comboGen;
             this.comboGen.Location = new System.Drawing.Point(39, 161);
             this.comboGen.Name = "comboGen";
             this.comboGen.ShadowDecoration.Parent = this.comboGen;
             this.comboGen.Size = new System.Drawing.Size(265, 36);
-            this.comboGen.TabIndex = 15;
+            this.comboGen.TabIndex = 14;
             this.comboGen.ValueMember = "IdGenero";
             // 
-            // plataformasTableAdapter1
+            // generoBindingSource1
             // 
-            this.plataformasTableAdapter1.ClearBeforeFill = true;
+            this.generoBindingSource1.DataMember = "Genero";
+            this.generoBindingSource1.DataSource = this.collectionDataSet4;
             // 
             // collectionDataSet4
             // 
             this.collectionDataSet4.DataSetName = "collectionDataSet4";
             this.collectionDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // generoBindingSource1
+            // plataformasTableAdapter1
             // 
-            this.generoBindingSource1.DataMember = "Genero";
-            this.generoBindingSource1.DataSource = this.collectionDataSet4;
+            this.plataformasTableAdapter1.ClearBeforeFill = true;
             // 
             // generoTableAdapter1
             // 
@@ -290,8 +293,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
