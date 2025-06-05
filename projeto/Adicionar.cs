@@ -23,12 +23,20 @@ namespace projeto
         {
             AdicionarColecao colecao = new AdicionarColecao(id);
             colecao.Show();
+            this.Close();
         }
 
         private void btnDesejo_Click_1(object sender, EventArgs e)
         {
             AdicionarWish wish = new AdicionarWish(id);
             wish.Show();
+
+            this.Close();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -15,7 +15,7 @@ namespace projeto
     public partial class MinhaColecao : Form
     {
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
-        private int passiveLoop = 3, userId = 0, page = 1;
+        private int passiveLoop = 6, userId = 0, page = 1;
         private double games = 0;
 
         private string plataform(int plataforma)
@@ -178,9 +178,9 @@ namespace projeto
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                while (reader.Read() && counter < 3)
+                while (reader.Read() && counter < 6)
                 {
-                    if (activeLoop >= passiveLoop -3)
+                    if (activeLoop >= passiveLoop -6)
                     {
                         image = reader.GetString(reader.GetOrdinal("Gamepic"));
                         nome = reader.GetString(reader.GetOrdinal("Titulo"));
@@ -305,15 +305,20 @@ namespace projeto
                     
             gameRefresh();
             lblPage.Text = Convert.ToString(page);
-            lblTotalPage.Text = ($"/ {Math.Ceiling(games / 3)}");
+            lblTotalPage.Text = ($"/ {Math.Ceiling(games / 6)}");
 
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             if (passiveLoop > 0)
             {
-                passiveLoop -= 3;
+                passiveLoop -= 6;
                 page--;
                 lblPage.Text = page.ToString();
                 gameRefresh();
@@ -325,7 +330,7 @@ namespace projeto
         {
             if (passiveLoop < games) 
             {
-                passiveLoop += 3;
+                passiveLoop += 6;
                 page++;
                 lblPage.Text = page.ToString();
                 gameRefresh();

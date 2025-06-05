@@ -38,7 +38,11 @@ namespace projeto
                 {
                     try
                     {
-                        if (nome == "")
+                        HttpVerify httpVerify = new HttpVerify();
+
+                        pic = httpVerify.Verify(pic);
+
+                        if (pic == "ERr0r404" || nome == "")
                         {
                             MessageBox.Show("Valores Inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
@@ -70,13 +74,9 @@ namespace projeto
                                 cmd2.Parameters.AddWithValue("@userid", userid);
                                 cmd2.Parameters.AddWithValue("@preco", preco);
                                 cmd2.Parameters.AddWithValue("@platform", plataforma);
-                                if (pic == "")
+                                if (pic != "")
                                 {
-                                    cmd2.Parameters.AddWithValue("@pic", "https://demofree.sirv.com/nope-not-here.jpg");
-                                }
-                                else
-                                {
-                                    cmd2.Parameters.AddWithValue("@pic",  pic);
+                                    cmd2.Parameters.AddWithValue("@pic", pic);
                                 }
                                 cmd2.ExecuteNonQuery();
 
@@ -108,6 +108,11 @@ namespace projeto
             // TODO: esta linha de código carrega dados na tabela 'collectionDataSet6.Plataformas'. Você pode movê-la ou removê-la conforme necessário.
             this.plataformasTableAdapter2.Fill(this.collectionDataSet6.Plataformas);
 
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace projeto
@@ -38,41 +40,73 @@ namespace projeto
         {
             InitializeComponent();
             id = idNumber;
-            /*lblname.Text = user;
 
-
+            
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string image = "";
                 conn.Open();
 
-                string query = "SELECT Userpic FROM Utilizador WHERE nome = (@nome)";
+                string image = "", nome = "";
 
+                string query = "SELECT Titulo, GamePic FROM Jogoscolecao WHERE userid = (@id)";
                 SqlCommand cmd = new SqlCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@nome", user);
+                cmd.Parameters.AddWithValue("@id", id);
 
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read()) 
+                if (reader.Read())
                 {
-                    image = reader.GetString(reader.GetOrdinal("Userpic"));
+                    image = reader.GetString(reader.GetOrdinal("Gamepic"));
+                    nome = reader.GetString(reader.GetOrdinal("Titulo"));
+                    while (reader.Read())
+                    {
+                        image = reader.GetString(reader.GetOrdinal("Gamepic"));
+                        nome = reader.GetString(reader.GetOrdinal("Titulo"));
+                    }
+
+                    picNewAdd.ImageLocation = image;
+                    lblNewAdd.Text = nome;
+                }
+                else 
+                {
+                    picNewAdd.Hide();
+                    label1.Hide();
+                    lblNewAdd.Hide();
                 }
 
-                pictureBox1.ImageLocation = image;
-            }*/
+
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Adicionar adicionar = new Adicionar(id);
             adicionar.Show();
+            this.Show();
         }
 
         private void btnColecao_Click(object sender, EventArgs e)
         {
             MinhaColecao minha = new MinhaColecao(id);
+            minha.FormClosed += (s, args) =>
+            {
+                if (Application.OpenForms.OfType<MinhaColecao>().Any())
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Show();
+                }
+            };
             minha.Show();
+
+        }
+
+        private void MainProgram_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

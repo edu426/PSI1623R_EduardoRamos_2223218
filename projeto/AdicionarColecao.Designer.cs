@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarColecao));
             this.label1 = new System.Windows.Forms.Label();
             this.txtJogo = new Guna.UI2.WinForms.Guna2TextBox();
             this.generoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -50,6 +51,9 @@
             this.collectionDataSet4 = new projeto.collectionDataSet4();
             this.plataformasTableAdapter1 = new projeto.collectionDataSet3TableAdapters.PlataformasTableAdapter();
             this.generoTableAdapter1 = new projeto.collectionDataSet4TableAdapters.GeneroTableAdapter();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.close = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource)).BeginInit();
@@ -58,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -270,11 +275,28 @@
             // 
             this.generoTableAdapter1.ClearBeforeFill = true;
             // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this;
+            // 
+            // close
+            // 
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(774, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close.TabIndex = 17;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // AdicionarColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.comboGen);
             this.Controls.Add(this.comboPlat);
             this.Controls.Add(this.btnCon);
@@ -284,6 +306,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtJogo);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdicionarColecao";
             this.Text = "AdicionarColecao";
             this.Load += new System.EventHandler(this.AdicionarColecao_Load);
@@ -295,6 +318,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.generoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -323,5 +347,8 @@
         private collectionDataSet4 collectionDataSet4;
         private System.Windows.Forms.BindingSource generoBindingSource1;
         private collectionDataSet4TableAdapters.GeneroTableAdapter generoTableAdapter1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private Guna.UI2.WinForms.Guna2PictureBox close;
     }
 }

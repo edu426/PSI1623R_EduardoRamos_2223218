@@ -25,12 +25,17 @@ namespace projeto
 
         private void btnCon_Click(object sender, EventArgs e)
         {
+            bool check = false;
             userPic = txtfFoto.Text;
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 try
                 {
-                    if (userPic == "")
+                    HttpVerify httpVerify = new HttpVerify();
+
+                    check = httpVerify.VerifyProfile(userPic);
+
+                    if (check == false)
                     {
                         MessageBox.Show("Valores Inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -62,6 +67,11 @@ namespace projeto
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ChangePhoto_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

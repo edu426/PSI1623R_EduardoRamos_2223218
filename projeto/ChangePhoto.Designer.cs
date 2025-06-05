@@ -103,6 +103,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ChangePhoto";
             this.Text = "ChangePhoto";
+            this.Load += new System.EventHandler(this.ChangePhoto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
 

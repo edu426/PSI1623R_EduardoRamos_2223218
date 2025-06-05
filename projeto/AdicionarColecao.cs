@@ -35,6 +35,7 @@ namespace projeto
         {
             string nome = "", pic = "";
             int genero = 0, plataforma = 0;
+            bool check = false;
 
             nome = txtJogo.Text;
             pic = txtImagem.Text;
@@ -47,7 +48,11 @@ namespace projeto
             {
                 try
                 {
-                    if ( nome == "")
+                    HttpVerify httpVerify = new HttpVerify();
+
+                    pic = httpVerify.Verify(pic);
+
+                    if (pic == "ERr0r404" || nome == "")
                     {
                         MessageBox.Show("Valores Inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -79,11 +84,7 @@ namespace projeto
                             cmd2.Parameters.AddWithValue("@userid", userid);
                             cmd2.Parameters.AddWithValue("@genero", genero);
                             cmd2.Parameters.AddWithValue("@platform", plataforma);
-                            if (pic == "")
-                            {
-                                cmd2.Parameters.AddWithValue("@pic", "https://demofree.sirv.com/nope-not-here.jpg");
-                            }
-                            else
+                            if (pic != "")
                             {
                                 cmd2.Parameters.AddWithValue("@pic", pic);
                             }
@@ -101,6 +102,11 @@ namespace projeto
 
                 }
             }
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

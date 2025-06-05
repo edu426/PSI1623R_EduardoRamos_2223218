@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MinhaColecao));
             this.collectionDataSet = new projeto.collectionDataSet();
             this.jogoscolecaoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jogoscolecaoTableAdapter = new projeto.collectionDataSetTableAdapters.JogoscolecaoTableAdapter();
@@ -60,6 +61,8 @@
             this.lblGen4 = new System.Windows.Forms.Label();
             this.lblGen5 = new System.Windows.Forms.Label();
             this.lblGen6 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.close = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jogoscolecaoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox3)).BeginInit();
@@ -68,6 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
             // 
             // collectionDataSet
@@ -88,7 +92,7 @@
             // 
             this.lbln1.AutoSize = true;
             this.lbln1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbln1.Location = new System.Drawing.Point(90, 12);
+            this.lbln1.Location = new System.Drawing.Point(233, 12);
             this.lbln1.Name = "lbln1";
             this.lbln1.Size = new System.Drawing.Size(85, 30);
             this.lbln1.TabIndex = 3;
@@ -98,7 +102,7 @@
             // 
             this.lbln2.AutoSize = true;
             this.lbln2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbln2.Location = new System.Drawing.Point(90, 158);
+            this.lbln2.Location = new System.Drawing.Point(233, 158);
             this.lbln2.Name = "lbln2";
             this.lbln2.Size = new System.Drawing.Size(85, 30);
             this.lbln2.TabIndex = 4;
@@ -108,7 +112,7 @@
             // 
             this.lbln3.AutoSize = true;
             this.lbln3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbln3.Location = new System.Drawing.Point(90, 311);
+            this.lbln3.Location = new System.Drawing.Point(233, 311);
             this.lbln3.Name = "lbln3";
             this.lbln3.Size = new System.Drawing.Size(85, 30);
             this.lbln3.TabIndex = 5;
@@ -118,7 +122,7 @@
             // 
             this.lblPlat1.AutoSize = true;
             this.lblPlat1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlat1.Location = new System.Drawing.Point(91, 51);
+            this.lblPlat1.Location = new System.Drawing.Point(234, 51);
             this.lblPlat1.Name = "lblPlat1";
             this.lblPlat1.Size = new System.Drawing.Size(95, 21);
             this.lblPlat1.TabIndex = 6;
@@ -128,7 +132,7 @@
             // 
             this.lblPlat2.AutoSize = true;
             this.lblPlat2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlat2.Location = new System.Drawing.Point(91, 199);
+            this.lblPlat2.Location = new System.Drawing.Point(234, 199);
             this.lblPlat2.Name = "lblPlat2";
             this.lblPlat2.Size = new System.Drawing.Size(95, 21);
             this.lblPlat2.TabIndex = 7;
@@ -138,7 +142,7 @@
             // 
             this.lblPlat3.AutoSize = true;
             this.lblPlat3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlat3.Location = new System.Drawing.Point(91, 351);
+            this.lblPlat3.Location = new System.Drawing.Point(234, 351);
             this.lblPlat3.Name = "lblPlat3";
             this.lblPlat3.Size = new System.Drawing.Size(95, 21);
             this.lblPlat3.TabIndex = 8;
@@ -148,7 +152,7 @@
             // 
             this.lblGen1.AutoSize = true;
             this.lblGen1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen1.Location = new System.Drawing.Point(91, 85);
+            this.lblGen1.Location = new System.Drawing.Point(234, 85);
             this.lblGen1.Name = "lblGen1";
             this.lblGen1.Size = new System.Drawing.Size(70, 21);
             this.lblGen1.TabIndex = 9;
@@ -158,7 +162,7 @@
             // 
             this.lblGen2.AutoSize = true;
             this.lblGen2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen2.Location = new System.Drawing.Point(91, 236);
+            this.lblGen2.Location = new System.Drawing.Point(234, 236);
             this.lblGen2.Name = "lblGen2";
             this.lblGen2.Size = new System.Drawing.Size(70, 21);
             this.lblGen2.TabIndex = 10;
@@ -168,7 +172,7 @@
             // 
             this.lblGen3.AutoSize = true;
             this.lblGen3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen3.Location = new System.Drawing.Point(91, 387);
+            this.lblGen3.Location = new System.Drawing.Point(234, 387);
             this.lblGen3.Name = "lblGen3";
             this.lblGen3.Size = new System.Drawing.Size(70, 21);
             this.lblGen3.TabIndex = 11;
@@ -216,7 +220,7 @@
             // 
             // picBox3
             // 
-            this.picBox3.Location = new System.Drawing.Point(12, 311);
+            this.picBox3.Location = new System.Drawing.Point(141, 311);
             this.picBox3.Name = "picBox3";
             this.picBox3.ShadowDecoration.Parent = this.picBox3;
             this.picBox3.Size = new System.Drawing.Size(72, 114);
@@ -226,7 +230,7 @@
             // 
             // picBox2
             // 
-            this.picBox2.Location = new System.Drawing.Point(12, 158);
+            this.picBox2.Location = new System.Drawing.Point(141, 158);
             this.picBox2.Name = "picBox2";
             this.picBox2.ShadowDecoration.Parent = this.picBox2;
             this.picBox2.Size = new System.Drawing.Size(72, 114);
@@ -236,7 +240,7 @@
             // 
             // picBox1
             // 
-            this.picBox1.Location = new System.Drawing.Point(12, 12);
+            this.picBox1.Location = new System.Drawing.Point(141, 12);
             this.picBox1.Name = "picBox1";
             this.picBox1.ShadowDecoration.Parent = this.picBox1;
             this.picBox1.Size = new System.Drawing.Size(72, 114);
@@ -264,7 +268,7 @@
             // 
             // picBox4
             // 
-            this.picBox4.Location = new System.Drawing.Point(366, 12);
+            this.picBox4.Location = new System.Drawing.Point(456, 12);
             this.picBox4.Name = "picBox4";
             this.picBox4.ShadowDecoration.Parent = this.picBox4;
             this.picBox4.Size = new System.Drawing.Size(72, 114);
@@ -274,7 +278,7 @@
             // 
             // picBox5
             // 
-            this.picBox5.Location = new System.Drawing.Point(366, 158);
+            this.picBox5.Location = new System.Drawing.Point(456, 158);
             this.picBox5.Name = "picBox5";
             this.picBox5.ShadowDecoration.Parent = this.picBox5;
             this.picBox5.Size = new System.Drawing.Size(72, 114);
@@ -284,7 +288,7 @@
             // 
             // picBox6
             // 
-            this.picBox6.Location = new System.Drawing.Point(366, 311);
+            this.picBox6.Location = new System.Drawing.Point(456, 311);
             this.picBox6.Name = "picBox6";
             this.picBox6.ShadowDecoration.Parent = this.picBox6;
             this.picBox6.Size = new System.Drawing.Size(72, 114);
@@ -296,7 +300,7 @@
             // 
             this.lbln4.AutoSize = true;
             this.lbln4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbln4.Location = new System.Drawing.Point(457, 12);
+            this.lbln4.Location = new System.Drawing.Point(547, 12);
             this.lbln4.Name = "lbln4";
             this.lbln4.Size = new System.Drawing.Size(85, 30);
             this.lbln4.TabIndex = 19;
@@ -306,7 +310,7 @@
             // 
             this.lbln5.AutoSize = true;
             this.lbln5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbln5.Location = new System.Drawing.Point(457, 158);
+            this.lbln5.Location = new System.Drawing.Point(547, 158);
             this.lbln5.Name = "lbln5";
             this.lbln5.Size = new System.Drawing.Size(85, 30);
             this.lbln5.TabIndex = 20;
@@ -316,7 +320,7 @@
             // 
             this.lbln6.AutoSize = true;
             this.lbln6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbln6.Location = new System.Drawing.Point(457, 311);
+            this.lbln6.Location = new System.Drawing.Point(547, 311);
             this.lbln6.Name = "lbln6";
             this.lbln6.Size = new System.Drawing.Size(85, 30);
             this.lbln6.TabIndex = 21;
@@ -326,7 +330,7 @@
             // 
             this.lblPlat4.AutoSize = true;
             this.lblPlat4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlat4.Location = new System.Drawing.Point(458, 51);
+            this.lblPlat4.Location = new System.Drawing.Point(548, 51);
             this.lblPlat4.Name = "lblPlat4";
             this.lblPlat4.Size = new System.Drawing.Size(95, 21);
             this.lblPlat4.TabIndex = 22;
@@ -336,7 +340,7 @@
             // 
             this.lblPlat5.AutoSize = true;
             this.lblPlat5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlat5.Location = new System.Drawing.Point(458, 199);
+            this.lblPlat5.Location = new System.Drawing.Point(548, 199);
             this.lblPlat5.Name = "lblPlat5";
             this.lblPlat5.Size = new System.Drawing.Size(95, 21);
             this.lblPlat5.TabIndex = 23;
@@ -346,7 +350,7 @@
             // 
             this.lblPlat6.AutoSize = true;
             this.lblPlat6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlat6.Location = new System.Drawing.Point(458, 351);
+            this.lblPlat6.Location = new System.Drawing.Point(548, 351);
             this.lblPlat6.Name = "lblPlat6";
             this.lblPlat6.Size = new System.Drawing.Size(95, 21);
             this.lblPlat6.TabIndex = 24;
@@ -356,7 +360,7 @@
             // 
             this.lblGen4.AutoSize = true;
             this.lblGen4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen4.Location = new System.Drawing.Point(458, 85);
+            this.lblGen4.Location = new System.Drawing.Point(548, 85);
             this.lblGen4.Name = "lblGen4";
             this.lblGen4.Size = new System.Drawing.Size(70, 21);
             this.lblGen4.TabIndex = 25;
@@ -366,7 +370,7 @@
             // 
             this.lblGen5.AutoSize = true;
             this.lblGen5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen5.Location = new System.Drawing.Point(458, 236);
+            this.lblGen5.Location = new System.Drawing.Point(548, 236);
             this.lblGen5.Name = "lblGen5";
             this.lblGen5.Size = new System.Drawing.Size(70, 21);
             this.lblGen5.TabIndex = 26;
@@ -376,17 +380,34 @@
             // 
             this.lblGen6.AutoSize = true;
             this.lblGen6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGen6.Location = new System.Drawing.Point(458, 387);
+            this.lblGen6.Location = new System.Drawing.Point(548, 387);
             this.lblGen6.Name = "lblGen6";
             this.lblGen6.Size = new System.Drawing.Size(70, 21);
             this.lblGen6.TabIndex = 27;
             this.lblGen6.Text = "Genero6";
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // close
+            // 
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(774, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close.TabIndex = 28;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // MinhaColecao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.lblGen6);
             this.Controls.Add(this.lblGen5);
             this.Controls.Add(this.lblGen4);
@@ -415,6 +436,7 @@
             this.Controls.Add(this.picBox3);
             this.Controls.Add(this.picBox2);
             this.Controls.Add(this.picBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MinhaColecao";
             this.Text = "MinhaColecao";
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet)).EndInit();
@@ -425,6 +447,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -462,5 +485,7 @@
         private System.Windows.Forms.Label lblGen4;
         private System.Windows.Forms.Label lblGen5;
         private System.Windows.Forms.Label lblGen6;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox close;
     }
 }

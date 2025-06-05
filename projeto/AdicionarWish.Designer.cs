@@ -29,10 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdicionarWish));
             this.label1 = new System.Windows.Forms.Label();
             this.txtJogo = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboPlat = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.plataformasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.collectionDataSet6 = new projeto.collectionDataSet6();
             this.plataformasBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.collectionDataSet5 = new projeto.collectionDataSet5();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,9 +50,11 @@
             this.plataformasBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.collectionDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.plataformasTableAdapter1 = new projeto.collectionDataSet5TableAdapters.PlataformasTableAdapter();
-            this.collectionDataSet6 = new projeto.collectionDataSet6();
-            this.plataformasBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.plataformasTableAdapter2 = new projeto.collectionDataSet6TableAdapters.PlataformasTableAdapter();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.close = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).BeginInit();
@@ -57,8 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -128,6 +132,16 @@
             this.comboPlat.Size = new System.Drawing.Size(265, 36);
             this.comboPlat.TabIndex = 15;
             this.comboPlat.ValueMember = "IdPlataforma";
+            // 
+            // plataformasBindingSource4
+            // 
+            this.plataformasBindingSource4.DataMember = "Plataformas";
+            this.plataformasBindingSource4.DataSource = this.collectionDataSet6;
+            // 
+            // collectionDataSet6
+            // 
+            this.collectionDataSet6.DataSetName = "collectionDataSet6";
+            this.collectionDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // plataformasBindingSource3
             // 
@@ -257,25 +271,32 @@
             // 
             this.plataformasTableAdapter1.ClearBeforeFill = true;
             // 
-            // collectionDataSet6
-            // 
-            this.collectionDataSet6.DataSetName = "collectionDataSet6";
-            this.collectionDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // plataformasBindingSource4
-            // 
-            this.plataformasBindingSource4.DataMember = "Plataformas";
-            this.plataformasBindingSource4.DataSource = this.collectionDataSet6;
-            // 
             // plataformasTableAdapter2
             // 
             this.plataformasTableAdapter2.ClearBeforeFill = true;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // close
+            // 
+            this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
+            this.close.Location = new System.Drawing.Point(774, 12);
+            this.close.Name = "close";
+            this.close.ShadowDecoration.Parent = this.close;
+            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.close.TabIndex = 21;
+            this.close.TabStop = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // AdicionarWish
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.btnCon);
             this.Controls.Add(this.comboPreco);
             this.Controls.Add(this.txtImagem);
@@ -285,9 +306,12 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtJogo);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdicionarWish";
             this.Text = "AdicionarWish";
             this.Load += new System.EventHandler(this.AdicionarWish_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2)).EndInit();
@@ -295,8 +319,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.collectionDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.plataformasBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,5 +348,7 @@
         private collectionDataSet6 collectionDataSet6;
         private System.Windows.Forms.BindingSource plataformasBindingSource4;
         private collectionDataSet6TableAdapters.PlataformasTableAdapter plataformasTableAdapter2;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2PictureBox close;
     }
 }

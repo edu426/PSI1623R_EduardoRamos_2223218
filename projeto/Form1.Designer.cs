@@ -48,20 +48,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(91, 151);
+            this.label1.Location = new System.Drawing.Point(104, 151);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Eduardo Ramos 2025";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.btnSign);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 223);
+            this.panel1.Controls.Add(this.btnLogin);
+            this.panel1.Location = new System.Drawing.Point(237, 251);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(289, 193);
+            this.panel1.Size = new System.Drawing.Size(307, 193);
             this.panel1.TabIndex = 3;
             // 
             // btnLogin
@@ -72,7 +73,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.HoverState.Parent = this.btnLogin;
-            this.btnLogin.Location = new System.Drawing.Point(9, 24);
+            this.btnLogin.Location = new System.Drawing.Point(3, 14);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.ShadowDecoration.Parent = this.btnLogin;
             this.btnLogin.Size = new System.Drawing.Size(297, 59);
@@ -88,7 +89,7 @@
             this.btnSign.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSign.ForeColor = System.Drawing.Color.White;
             this.btnSign.HoverState.Parent = this.btnSign;
-            this.btnSign.Location = new System.Drawing.Point(3, 89);
+            this.btnSign.Location = new System.Drawing.Point(3, 79);
             this.btnSign.Name = "btnSign";
             this.btnSign.ShadowDecoration.Parent = this.btnSign;
             this.btnSign.Size = new System.Drawing.Size(297, 59);
@@ -104,7 +105,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 40);
+            this.label2.Location = new System.Drawing.Point(319, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 21);
             this.label2.TabIndex = 7;
@@ -125,10 +126,10 @@
             // guna2PictureBox2
             // 
             this.guna2PictureBox2.Image = global::projeto.Properties.Resources.ChatGPT_Image_29_05_2025__11_37_13;
-            this.guna2PictureBox2.Location = new System.Drawing.Point(289, -1);
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-4, -1);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
             this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
-            this.guna2PictureBox2.Size = new System.Drawing.Size(266, 464);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(238, 463);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 9;
             this.guna2PictureBox2.TabStop = false;
@@ -136,7 +137,7 @@
             // guna2PictureBox1
             // 
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-32, 57);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(156, 57);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
             this.guna2PictureBox1.Size = new System.Drawing.Size(491, 184);
