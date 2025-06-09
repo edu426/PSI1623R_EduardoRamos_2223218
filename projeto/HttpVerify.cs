@@ -14,11 +14,11 @@ namespace projeto
             {
                 return link;
             }
-            else if (link.StartsWith(""))
+            else if (link == "")
             {
                 return "https://demofree.sirv.com/nope-not-here.jpg";
             }
-            else
+            else 
             {
                 return "ERr0r404";
             }

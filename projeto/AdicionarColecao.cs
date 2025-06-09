@@ -42,7 +42,7 @@ namespace projeto
             genero = (int)((DataRowView)comboGen.SelectedItem)["IdGenero"];
             plataforma = (int)((DataRowView)comboPlat.SelectedItem)["IdPlataforma"];
 
-            MessageBox.Show($"{nome} {pic} {genero} {plataforma}");
+            //MessageBox.Show($"{nome} {pic} {genero} {plataforma}");
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -51,6 +51,7 @@ namespace projeto
                     HttpVerify httpVerify = new HttpVerify();
 
                     pic = httpVerify.Verify(pic);
+                    //MessageBox.Show(pic);
 
                     if (pic == "ERr0r404" || nome == "")
                     {

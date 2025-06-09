@@ -139,6 +139,7 @@ namespace projeto
 
         private void gameRefresh()
         {
+            lblNjogo.Show();
             picBox1.Hide();
             picBox2.Hide();
             picBox3.Hide();
@@ -202,6 +203,7 @@ namespace projeto
                             lblGen1.Show();
                             lbln1.Show();
                             lblPlat1.Show();
+                            lblNjogo.Hide();
                             //MessageBox.Show("Case 0");
                             break;
 
@@ -312,6 +314,17 @@ namespace projeto
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void lbln6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit1_Click(object sender, EventArgs e)
+        {
+            int gameNb = 1;
+            gameNb += passiveLoop;
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)

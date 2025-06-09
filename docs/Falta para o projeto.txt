@@ -1,0 +1,6 @@
+--Falta para o projeto:--
+
+1º Whislist
+2º Admin + Verificações melhores
+3º Log Out
+4º Nova UI
