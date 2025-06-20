@@ -90,3 +90,5 @@ DROP TABLE JogosColecao
 DROP TABLE Wishlist
 DROP TABLE Plataforma
 DROP TABLE Genero
+
+DROP COLUMN IdJogos, Titulo, UserId, PlataformaId, Genero GamePic FROM Jogoscolecao WHERE Idjogos = 1

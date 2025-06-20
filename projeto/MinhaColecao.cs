@@ -164,6 +164,12 @@ namespace projeto
             lblPlat4.Hide();
             lblPlat5.Hide();
             lblPlat6.Hide();
+            btnEdit1.Hide();
+            btnEdit2.Hide();
+            btnEdit3.Hide();
+            btnEdit4.Hide();
+            btnEdit5.Hide();
+            btnEdit6.Hide();
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
@@ -203,6 +209,7 @@ namespace projeto
                             lblGen1.Show();
                             lbln1.Show();
                             lblPlat1.Show();
+                            btnEdit1.Show();
                             lblNjogo.Hide();
                             //MessageBox.Show("Case 0");
                             break;
@@ -218,6 +225,7 @@ namespace projeto
                             lblGen2.Show();
                             lbln2.Show();
                             lblPlat2.Show();
+                            btnEdit2.Show();
                             //MessageBox.Show("Case 1");
 
                             break;
@@ -233,6 +241,7 @@ namespace projeto
                             lblGen3.Show();
                             lbln3.Show();
                             lblPlat3.Show();
+                            btnEdit3.Show();
                             //MessageBox.Show("Case 2");
 
                             break;
@@ -247,7 +256,9 @@ namespace projeto
                             lblGen4.Show();
                             lbln4.Show();
                             lblPlat4.Show();
+                            btnEdit4.Show();
                             break;
+
                         case 4:
                             picBox5.ImageLocation = image;
                             lbln5.Text = nome;
@@ -259,7 +270,9 @@ namespace projeto
                             lblGen5.Show();
                             lbln5.Show();
                             lblPlat5.Show();
+                            btnEdit5.Show();
                             break;
+
                         case 5:
                             picBox6.ImageLocation = image;
                             lbln6.Text = nome;
@@ -271,6 +284,7 @@ namespace projeto
                             lblGen6.Show();
                             lbln6.Show();
                             lblPlat6.Show();
+                            btnEdit6.Show();
                             break;
 
                     }
@@ -323,8 +337,98 @@ namespace projeto
 
         private void btnEdit1_Click(object sender, EventArgs e)
         {
-            int gameNb = 1;
-            gameNb += passiveLoop;
+            int gameNb = 6;
+            gameNb -= passiveLoop;
+
+            this.Hide();
+            EditJogo editJogo = new EditJogo(userId, gameNb);
+
+            editJogo.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            editJogo.Show();
+        }
+
+        private void btnEdit4_Click(object sender, EventArgs e)
+        {
+            int gameNb = 9;
+            gameNb -= passiveLoop;
+
+            this.Hide();
+            EditJogo editJogo = new EditJogo(userId, gameNb);
+
+            editJogo.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            editJogo.Show();
+        }
+
+        private void btnEdit2_Click(object sender, EventArgs e)
+        {
+            int gameNb = 7;
+            gameNb -= passiveLoop;
+
+            this.Hide();
+            EditJogo editJogo = new EditJogo(userId, gameNb);
+
+            editJogo.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            editJogo.Show();
+        }
+
+        private void btnEdit3_Click(object sender, EventArgs e)
+        {
+            int gameNb = 8;
+            gameNb -= passiveLoop;
+
+            this.Hide();
+            EditJogo editJogo = new EditJogo(userId, gameNb);
+
+            editJogo.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            editJogo.Show();
+        }
+
+        private void btnEdit5_Click(object sender, EventArgs e)
+        {
+            int gameNb = 10;
+            gameNb -= passiveLoop;
+
+            this.Hide();
+            EditJogo editJogo = new EditJogo(userId, gameNb);
+
+            editJogo.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            editJogo.Show();
+        }
+
+        private void btnEdit6_Click(object sender, EventArgs e)
+        {
+            int gameNb = 11;
+            gameNb -= passiveLoop;
+
+            this.Hide();
+            EditJogo editJogo = new EditJogo(userId, gameNb);
+
+            editJogo.FormClosed += (s, args) =>
+            {
+                this.Close();
+            };
+
+            editJogo.Show();
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
