@@ -82,5 +82,10 @@ namespace projeto
         {
             UpdateProfile();
         }
+
+        private void Perfil_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -61,6 +61,11 @@ namespace projeto
 
         }
 
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void btnApagar_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -105,32 +110,15 @@ namespace projeto
                     {
                         conn.Open();
 
-                        string query = "SELECT nome FROM Utilizador WHERE nome = @nome";
+                        string query = "UPDATE JogosColecao SET Titulo=@nome, GamePic=@gamepic, Genero=@genId WHERE IdJogos = (@idgame)";
                         SqlCommand cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@nome", nome);
+                        cmd.Parameters.AddWithValue("@gamepic", gamePic);
+                        cmd.Parameters.AddWithValue("@genId", genId);
+                        cmd.Parameters.AddWithValue("@idgame", gameId);
 
                         SqlDataReader dr = cmd.ExecuteReader();
-
-                        if (dr.HasRows)
-                        {
-                            MessageBox.Show("Já existe um utilizador com esse nome!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                        }
-                        else
-                        {
-                            dr.Close();
-
-                            query = "UPDATE Utilizador SET nome=@nome WHERE idutilizador =@id";
-
-                            SqlCommand cmd2 = new SqlCommand(query, conn);
-
-                            cmd2.Parameters.AddWithValue("@nome", nome);
-                            cmd2.Parameters.AddWithValue("id", id);
-                            cmd2.ExecuteNonQuery();
-
-                            MessageBox.Show("Nome atulizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
+                        this.Close();
                     }
 
                 }
@@ -140,5 +128,6 @@ namespace projeto
 
                 }
             }
+        }
     }
 }

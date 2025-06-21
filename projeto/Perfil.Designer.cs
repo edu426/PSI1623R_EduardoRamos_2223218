@@ -50,9 +50,10 @@
             this.lblname.AutoSize = true;
             this.lblname.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblname.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblname.Location = new System.Drawing.Point(237, 107);
+            this.lblname.Location = new System.Drawing.Point(356, 165);
+            this.lblname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblname.Name = "lblname";
-            this.lblname.Size = new System.Drawing.Size(67, 30);
+            this.lblname.Size = new System.Drawing.Size(102, 45);
             this.lblname.TabIndex = 2;
             this.lblname.Text = "name";
             // 
@@ -60,9 +61,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(156, 107);
+            this.label1.Location = new System.Drawing.Point(234, 165);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 30);
+            this.label1.Size = new System.Drawing.Size(115, 45);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome:";
             // 
@@ -70,9 +72,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(157, 153);
+            this.label2.Location = new System.Drawing.Point(236, 235);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 30);
+            this.label2.Size = new System.Drawing.Size(58, 45);
             this.label2.TabIndex = 4;
             this.label2.Text = "ID:";
             // 
@@ -81,9 +84,10 @@
             this.lblId.AutoSize = true;
             this.lblId.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblId.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblId.Location = new System.Drawing.Point(237, 153);
+            this.lblId.Location = new System.Drawing.Point(356, 235);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(32, 30);
+            this.lblId.Size = new System.Drawing.Size(49, 45);
             this.lblId.TabIndex = 5;
             this.lblId.Text = "id";
             // 
@@ -99,10 +103,11 @@
             this.btnNome.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNome.ForeColor = System.Drawing.Color.White;
             this.btnNome.HoverState.Parent = this.btnNome;
-            this.btnNome.Location = new System.Drawing.Point(24, 254);
+            this.btnNome.Location = new System.Drawing.Point(36, 391);
+            this.btnNome.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNome.Name = "btnNome";
             this.btnNome.ShadowDecoration.Parent = this.btnNome;
-            this.btnNome.Size = new System.Drawing.Size(172, 57);
+            this.btnNome.Size = new System.Drawing.Size(258, 88);
             this.btnNome.TabIndex = 16;
             this.btnNome.Text = "Mudar Nome";
             this.btnNome.Click += new System.EventHandler(this.btnNome_Click);
@@ -115,10 +120,11 @@
             this.btnFoto.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnFoto.ForeColor = System.Drawing.Color.White;
             this.btnFoto.HoverState.Parent = this.btnFoto;
-            this.btnFoto.Location = new System.Drawing.Point(242, 254);
+            this.btnFoto.Location = new System.Drawing.Point(363, 391);
+            this.btnFoto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnFoto.Name = "btnFoto";
             this.btnFoto.ShadowDecoration.Parent = this.btnFoto;
-            this.btnFoto.Size = new System.Drawing.Size(172, 57);
+            this.btnFoto.Size = new System.Drawing.Size(258, 88);
             this.btnFoto.TabIndex = 18;
             this.btnFoto.Text = "Mudar foto de perfil";
             this.btnFoto.Click += new System.EventHandler(this.btnFoto_Click);
@@ -126,10 +132,11 @@
             // close
             // 
             this.close.Image = ((System.Drawing.Image)(resources.GetObject("close.Image")));
-            this.close.Location = new System.Drawing.Point(411, 12);
+            this.close.Location = new System.Drawing.Point(616, 18);
+            this.close.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.close.Name = "close";
             this.close.ShadowDecoration.Parent = this.close;
-            this.close.Size = new System.Drawing.Size(14, 18);
+            this.close.Size = new System.Drawing.Size(21, 28);
             this.close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.close.TabIndex = 15;
             this.close.TabStop = false;
@@ -137,9 +144,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(27, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(40, 102);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(108, 117);
+            this.pictureBox1.Size = new System.Drawing.Size(162, 180);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -148,10 +156,11 @@
             // 
             this.Refresh.ImageLocation = "https://uxwing.com/wp-content/themes/uxwing/download/web-app-development/refresh-" +
     "icon.png";
-            this.Refresh.Location = new System.Drawing.Point(391, 12);
+            this.Refresh.Location = new System.Drawing.Point(586, 18);
+            this.Refresh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Refresh.Name = "Refresh";
             this.Refresh.ShadowDecoration.Parent = this.Refresh;
-            this.Refresh.Size = new System.Drawing.Size(14, 18);
+            this.Refresh.Size = new System.Drawing.Size(21, 28);
             this.Refresh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Refresh.TabIndex = 19;
             this.Refresh.TabStop = false;
@@ -159,9 +168,9 @@
             // 
             // Perfil
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(437, 344);
+            this.ClientSize = new System.Drawing.Size(656, 529);
             this.Controls.Add(this.Refresh);
             this.Controls.Add(this.btnFoto);
             this.Controls.Add(this.btnNome);
@@ -172,8 +181,10 @@
             this.Controls.Add(this.lblname);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Perfil";
             this.Text = "Perfil";
+            this.Load += new System.EventHandler(this.Perfil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Refresh)).EndInit();

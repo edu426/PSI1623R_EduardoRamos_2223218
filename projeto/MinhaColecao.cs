@@ -170,14 +170,29 @@ namespace projeto
             btnEdit4.Hide();
             btnEdit5.Hide();
             btnEdit6.Hide();
+            lblUser1.Hide();
+            lblUser2.Hide();
+            lblUser3.Hide();
+            lblUser4.Hide();
+            lblUser5.Hide();
+            lblUser6.Hide();
+
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                string image = "", nome = "", strPlat = "", strGen = "";
-                int plat = 0, gen = 0, counter = -1, activeLoop = 0;
+                string image = "", nome = "", strPlat = "", strGen = "", query = "";
+                int plat = 0, gen = 0, counter = -1, activeLoop = 0, userId = 0;
                 conn.Open();
 
-                string query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM Jogoscolecao WHERE userid = (@id)";
+                if (userId == 1)
+                {
+                    query = "SELECT Titulo, PlataformaId, Genero, GamePic, UserId FROM Jogoscolecao";
+
+                }
+                else
+                {
+                    query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM Jogoscolecao WHERE userid = (@id)";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -193,6 +208,7 @@ namespace projeto
                         nome = reader.GetString(reader.GetOrdinal("Titulo"));
                         plat = reader.GetInt32(reader.GetOrdinal("plataformaId"));
                         gen = reader.GetInt32(reader.GetOrdinal("genero"));
+                        userId = reader.GetInt32(reader.GetOrdinal("UserId"));
                         counter++;
                     }
 
@@ -211,6 +227,10 @@ namespace projeto
                             lblPlat1.Show();
                             btnEdit1.Show();
                             lblNjogo.Hide();
+                            if(userId == 1)
+                            {
+                                lblUser1.Show();
+                            }
                             //MessageBox.Show("Case 0");
                             break;
 
@@ -226,6 +246,10 @@ namespace projeto
                             lbln2.Show();
                             lblPlat2.Show();
                             btnEdit2.Show();
+                            if (userId == 1)
+                            {
+                                lblUser2.Show();
+                            }
                             //MessageBox.Show("Case 1");
 
                             break;
@@ -242,6 +266,10 @@ namespace projeto
                             lbln3.Show();
                             lblPlat3.Show();
                             btnEdit3.Show();
+                            if (userId == 1)
+                            {
+                                lblUser3.Show();
+                            }
                             //MessageBox.Show("Case 2");
 
                             break;
@@ -257,6 +285,10 @@ namespace projeto
                             lbln4.Show();
                             lblPlat4.Show();
                             btnEdit4.Show();
+                            if (userId == 1)
+                            {
+                                lblUser4.Show();
+                            }
                             break;
 
                         case 4:
@@ -271,6 +303,10 @@ namespace projeto
                             lbln5.Show();
                             lblPlat5.Show();
                             btnEdit5.Show();
+                            if (userId == 1)
+                            {
+                                lblUser5.Show();
+                            }
                             break;
 
                         case 5:
@@ -285,6 +321,10 @@ namespace projeto
                             lbln6.Show();
                             lblPlat6.Show();
                             btnEdit6.Show();
+                            if (userId == 1)
+                            {
+                                lblUser6.Show();
+                            }
                             break;
 
                     }
