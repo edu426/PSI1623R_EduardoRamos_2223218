@@ -89,7 +89,7 @@ namespace projeto
                         MessageBox.Show("Utilizador não encontrado!", "Login");
                     }
 
-                    MessageBox.Show($"Enter:{enterUser} {enterPass}\nDatabase:{user} {pass} {pic} {id}", "Debug Text");
+                    //MessageBox.Show($"Enter:{enterUser} {enterPass}\nDatabase:{user} {pass} {pic} {id}", "Debug Text");
                     conn.Close();
 
                 }

@@ -99,7 +99,7 @@ namespace projeto
             }
 
 
-            MessageBox.Show($"{nome} {pic} {preco} {plataforma}");
+            //MessageBox.Show($"{nome} {pic} {preco} {plataforma}");
 
         }
 

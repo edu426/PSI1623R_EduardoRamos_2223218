@@ -116,6 +116,7 @@
             this.btnDesejo.Size = new System.Drawing.Size(400, 67);
             this.btnDesejo.TabIndex = 10;
             this.btnDesejo.Text = "Lista de Desejos";
+            this.btnDesejo.Click += new System.EventHandler(this.btnDesejo_Click);
             // 
             // btnAdd
             // 

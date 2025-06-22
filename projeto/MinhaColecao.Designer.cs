@@ -356,7 +356,6 @@
             this.lbln6.Size = new System.Drawing.Size(129, 45);
             this.lbln6.TabIndex = 21;
             this.lbln6.Text = "Nome6";
-            this.lbln6.Click += new System.EventHandler(this.lbln6_Click);
             // 
             // lblPlat4
             // 
@@ -466,7 +465,7 @@
             this.btnEdit1.Size = new System.Drawing.Size(76, 31);
             this.btnEdit1.TabIndex = 30;
             this.btnEdit1.Text = "Editar";
-            this.btnEdit1.Click += new System.EventHandler(this.btnEdit1_Click);
+            this.btnEdit1.Click += new System.EventHandler(this.btnEdit1_Click_1);
             // 
             // btnEdit4
             // 

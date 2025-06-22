@@ -108,5 +108,22 @@ namespace projeto
         {
 
         }
+
+        private void btnDesejo_Click(object sender, EventArgs e)
+        {
+            Whislist whis = new Whislist(id);
+            whis.FormClosed += (s, args) =>
+            {
+                if (Application.OpenForms.OfType<Whislist>().Any())
+                {
+                    this.Close();
+                }
+                else
+                {
+                    this.Show();
+                }
+            };
+            whis.Show();
+        }
     }
 }

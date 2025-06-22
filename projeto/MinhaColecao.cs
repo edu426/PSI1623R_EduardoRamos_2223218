@@ -181,7 +181,7 @@ namespace projeto
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 string image = "", nome = "", strPlat = "", strGen = "", query = "";
-                int plat = 0, gen = 0, counter = -1, activeLoop = 0, userId = 0;
+                int plat = 0, counter = -1, activeLoop = 0, gameOwner = 0, gen = 0;
                 conn.Open();
 
                 if (userId == 1)
@@ -191,8 +191,9 @@ namespace projeto
                 }
                 else
                 {
-                    query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM Jogoscolecao WHERE userid = (@id)";
+                    query = "SELECT Titulo, PlataformaId, Genero, GamePic, UserId FROM Jogoscolecao WHERE Userid = (@id)";
                 }
+
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -202,13 +203,13 @@ namespace projeto
 
                 while (reader.Read() && counter < 6)
                 {
-                    if (activeLoop >= passiveLoop -6)
+                    if (activeLoop >= passiveLoop - 6)
                     {
                         image = reader.GetString(reader.GetOrdinal("Gamepic"));
                         nome = reader.GetString(reader.GetOrdinal("Titulo"));
-                        plat = reader.GetInt32(reader.GetOrdinal("plataformaId"));
-                        gen = reader.GetInt32(reader.GetOrdinal("genero"));
-                        userId = reader.GetInt32(reader.GetOrdinal("UserId"));
+                        plat = reader.GetInt32(reader.GetOrdinal("PlataformaId"));
+                        gen = reader.GetInt32(reader.GetOrdinal("Genero"));
+                        gameOwner = reader.GetInt32(reader.GetOrdinal("UserId"));
                         counter++;
                     }
 
@@ -218,8 +219,8 @@ namespace projeto
                             picBox1.ImageLocation = image;
                             lbln1.Text = nome;
                             strPlat = plataform(plat);
-                            lblPlat1.Text = strPlat;
                             strGen = genre(gen);
+                            lblPlat1.Text = strPlat;
                             lblGen1.Text = strGen;
                             picBox1.Show();
                             lblGen1.Show();
@@ -227,8 +228,9 @@ namespace projeto
                             lblPlat1.Show();
                             btnEdit1.Show();
                             lblNjogo.Hide();
-                            if(userId == 1)
+                            if (userId == 1)
                             {
+                                lblUser1.Text = ($"Id do dono: {gameOwner}");
                                 lblUser1.Show();
                             }
                             //MessageBox.Show("Case 0");
@@ -238,8 +240,8 @@ namespace projeto
                             picBox2.ImageLocation = image;
                             lbln2.Text = nome;
                             strPlat = plataform(plat);
-                            lblPlat2.Text = strPlat;
                             strGen = genre(gen);
+                            lblPlat2.Text = strPlat;
                             lblGen2.Text = strGen;
                             picBox2.Show();
                             lblGen2.Show();
@@ -248,6 +250,7 @@ namespace projeto
                             btnEdit2.Show();
                             if (userId == 1)
                             {
+                                lblUser2.Text = ($"Id do dono: {gameOwner}");
                                 lblUser2.Show();
                             }
                             //MessageBox.Show("Case 1");
@@ -258,8 +261,8 @@ namespace projeto
                             picBox3.ImageLocation = image;
                             lbln3.Text = nome;
                             strPlat = plataform(plat);
-                            lblPlat3.Text = strPlat;
                             strGen = genre(gen);
+                            lblPlat3.Text = strPlat;
                             lblGen3.Text = strGen;
                             picBox3.Show();
                             lblGen3.Show();
@@ -268,6 +271,7 @@ namespace projeto
                             btnEdit3.Show();
                             if (userId == 1)
                             {
+                                lblUser3.Text = ($"Id do dono: {gameOwner}");
                                 lblUser3.Show();
                             }
                             //MessageBox.Show("Case 2");
@@ -277,8 +281,8 @@ namespace projeto
                             picBox4.ImageLocation = image;
                             lbln4.Text = nome;
                             strPlat = plataform(plat);
-                            lblPlat4.Text = strPlat;
                             strGen = genre(gen);
+                            lblPlat4.Text = strPlat;
                             lblGen4.Text = strGen;
                             picBox4.Show();
                             lblGen4.Show();
@@ -287,6 +291,8 @@ namespace projeto
                             btnEdit4.Show();
                             if (userId == 1)
                             {
+
+                                lblUser4.Text = ($"Id do dono: {gameOwner}");
                                 lblUser4.Show();
                             }
                             break;
@@ -295,8 +301,8 @@ namespace projeto
                             picBox5.ImageLocation = image;
                             lbln5.Text = nome;
                             strPlat = plataform(plat);
-                            lblPlat5.Text = strPlat;
                             strGen = genre(gen);
+                            lblPlat5.Text = strPlat;
                             lblGen5.Text = strGen;
                             picBox5.Show();
                             lblGen5.Show();
@@ -305,6 +311,8 @@ namespace projeto
                             btnEdit5.Show();
                             if (userId == 1)
                             {
+
+                                lblUser5.Text = ($"Id do dono: {gameOwner}");
                                 lblUser5.Show();
                             }
                             break;
@@ -313,8 +321,8 @@ namespace projeto
                             picBox6.ImageLocation = image;
                             lbln6.Text = nome;
                             strPlat = plataform(plat);
-                            lblPlat6.Text = strPlat;
                             strGen = genre(gen);
+                            lblPlat6.Text = strPlat;
                             lblGen6.Text = strGen;
                             picBox6.Show();
                             lblGen6.Show();
@@ -323,6 +331,8 @@ namespace projeto
                             btnEdit6.Show();
                             if (userId == 1)
                             {
+
+                                lblUser6.Text = ($"Id do dono: {gameOwner}");
                                 lblUser6.Show();
                             }
                             break;
@@ -339,12 +349,20 @@ namespace projeto
         {
             InitializeComponent();
             userId = id;
+            string query;
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
 
-                string query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM Jogoscolecao WHERE userid = (@id)";
+                if (userId == 1) 
+                {
+                    query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM JogosColecao";
+                }
+                else
+                {
+                    query = "SELECT Titulo, PlataformaId, Genero, GamePic FROM JogosColecao WHERE userid = (@id)";
+                }
 
                 SqlCommand cmd = new SqlCommand(query, conn);
 
@@ -354,15 +372,87 @@ namespace projeto
 
                 while (reader.Read())
                 {
-                    games++;   
+                    games++;
                 }
-                MessageBox.Show(games.ToString());  
+                //MessageBox.Show(games.ToString());
             }
-                    
+
             gameRefresh();
             lblPage.Text = Convert.ToString(page);
             lblTotalPage.Text = ($"/ {Math.Ceiling(games / 6)}");
 
+        }
+
+        private void btnEdit3_Click(object sender, EventArgs e)
+        {
+            {
+                int gameNb = 8;
+                gameNb -= passiveLoop;
+
+                this.Hide();
+                EditJogo EditJogo = new EditJogo(userId, gameNb);
+
+                EditJogo.FormClosed += (s, args) =>
+                {
+                    this.Close();
+                };
+
+                EditJogo.Show();
+            }
+        }
+
+        private void btnEdit4_Click(object sender, EventArgs e)
+        {
+            {
+                int gameNb = 9;
+                gameNb -= passiveLoop;
+
+                this.Hide();
+                EditJogo EditJogo = new EditJogo(userId, gameNb);
+
+                EditJogo.FormClosed += (s, args) =>
+                {
+                    this.Close();
+                };
+
+                EditJogo.Show();
+            }
+        }
+
+        private void btnEdit5_Click(object sender, EventArgs e)
+        {
+            {
+                int gameNb = 10;
+                gameNb -= passiveLoop;
+
+                this.Hide();
+                EditJogo EditJogo = new EditJogo(userId, gameNb);
+
+                EditJogo.FormClosed += (s, args) =>
+                {
+                    this.Close();
+                };
+
+                EditJogo.Show();
+            }
+        }
+
+        private void btnEdit6_Click(object sender, EventArgs e)
+        {
+            {
+                int gameNb = 11;
+                gameNb -= passiveLoop;
+
+                this.Hide();
+                EditJogo EditJogo = new EditJogo(userId, gameNb);
+
+                EditJogo.FormClosed += (s, args) =>
+                {
+                    this.Close();
+                };
+
+                EditJogo.Show();
+            }
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -370,105 +460,38 @@ namespace projeto
             this.Close();
         }
 
-        private void lbln6_Click(object sender, EventArgs e)
+        private void btnEdit2_Click(object sender, EventArgs e)
         {
+            {
+                int gameNb = 7;
+                gameNb -= passiveLoop;
 
+                this.Hide();
+                EditJogo EditJogo = new EditJogo(userId, gameNb);
+
+                EditJogo.FormClosed += (s, args) =>
+                {
+                    this.Close();
+                };
+
+                EditJogo.Show();
+            }
         }
 
-        private void btnEdit1_Click(object sender, EventArgs e)
+        private void btnEdit1_Click_1(object sender, EventArgs e)
         {
             int gameNb = 6;
             gameNb -= passiveLoop;
 
             this.Hide();
-            EditJogo editJogo = new EditJogo(userId, gameNb);
+            EditJogo EditJogo = new EditJogo(userId, gameNb);
 
-            editJogo.FormClosed += (s, args) =>
+            EditJogo.FormClosed += (s, args) =>
             {
                 this.Close();
             };
 
-            editJogo.Show();
-        }
-
-        private void btnEdit4_Click(object sender, EventArgs e)
-        {
-            int gameNb = 9;
-            gameNb -= passiveLoop;
-
-            this.Hide();
-            EditJogo editJogo = new EditJogo(userId, gameNb);
-
-            editJogo.FormClosed += (s, args) =>
-            {
-                this.Close();
-            };
-
-            editJogo.Show();
-        }
-
-        private void btnEdit2_Click(object sender, EventArgs e)
-        {
-            int gameNb = 7;
-            gameNb -= passiveLoop;
-
-            this.Hide();
-            EditJogo editJogo = new EditJogo(userId, gameNb);
-
-            editJogo.FormClosed += (s, args) =>
-            {
-                this.Close();
-            };
-
-            editJogo.Show();
-        }
-
-        private void btnEdit3_Click(object sender, EventArgs e)
-        {
-            int gameNb = 8;
-            gameNb -= passiveLoop;
-
-            this.Hide();
-            EditJogo editJogo = new EditJogo(userId, gameNb);
-
-            editJogo.FormClosed += (s, args) =>
-            {
-                this.Close();
-            };
-
-            editJogo.Show();
-        }
-
-        private void btnEdit5_Click(object sender, EventArgs e)
-        {
-            int gameNb = 10;
-            gameNb -= passiveLoop;
-
-            this.Hide();
-            EditJogo editJogo = new EditJogo(userId, gameNb);
-
-            editJogo.FormClosed += (s, args) =>
-            {
-                this.Close();
-            };
-
-            editJogo.Show();
-        }
-
-        private void btnEdit6_Click(object sender, EventArgs e)
-        {
-            int gameNb = 11;
-            gameNb -= passiveLoop;
-
-            this.Hide();
-            EditJogo editJogo = new EditJogo(userId, gameNb);
-
-            editJogo.FormClosed += (s, args) =>
-            {
-                this.Close();
-            };
-
-            editJogo.Show();
+            EditJogo.Show();
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -485,7 +508,7 @@ namespace projeto
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (passiveLoop < games) 
+            if (passiveLoop < games)
             {
                 passiveLoop += 6;
                 page++;

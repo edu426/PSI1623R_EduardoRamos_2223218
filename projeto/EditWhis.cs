@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms.Suite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +11,13 @@ using System.Windows.Forms;
 
 namespace projeto
 {
-    public partial class EditJogo : Form
+    public partial class EditWhis : Form
     {
         private int id, gameNum, gameId;
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
 
 
-        public EditJogo(int userId, int gNum)
+        public EditWhis(int userId, int gNum)
         {
             int counter = 0;
             InitializeComponent();
@@ -27,9 +26,17 @@ namespace projeto
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
             {
+                string query = "";
                 conn.Open();
 
-                string query = "SELECT Titulo, GamePic, IdJogos FROM Jogoscolecao WHERE userid = (@id)";
+                if (id == 1)
+                {
+                    query = "SELECT Titulo, GamePic, IdWhislist, Preco FROM Whislist";
+                }
+                else
+                {
+                    query = "SELECT Titulo, GamePic, IdWhislist, Preco FROM Whislist WHERE userid = (@id)";
+                }
 
 
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -41,12 +48,13 @@ namespace projeto
 
                 while (reader.Read())
                 {
-                    if ( counter == gameNum)
+                    if (counter == gameNum)
                     {
                         txtNome.Text = reader.GetString(reader.GetOrdinal("Titulo"));
                         txtImage.Text = reader.GetString(reader.GetOrdinal("GamePic"));
                         picGame.ImageLocation = reader.GetString(reader.GetOrdinal("GamePic"));
-                        gameId = reader.GetInt32(reader.GetOrdinal("IdJogos"));
+                        gameId = reader.GetInt32(reader.GetOrdinal("IdWhislist"));
+                        txtPreco.Text = Convert.ToString(reader.GetDecimal(reader.GetOrdinal("Preco")));
 
                     }
                     counter++;
@@ -54,48 +62,17 @@ namespace projeto
             }
         }
 
-        private void EditJogo_Load(object sender, EventArgs e)
-        {
-            // TODO: This line of code loads data into the 'collectionDataSet7.Genero' table. You can move, or remove it, as needed.
-            this.generoTableAdapter.Fill(this.collectionDataSet7.Genero);
-
-        }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnApagar_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection conn = new SqlConnection(_connectionString))
-            {
-                //MessageBox.Show($"{gameId}");
-                conn.Open();
-                string query = "DELETE FROM JogosColecao WHERE IdJogos = (@idgame)";
-
-
-                SqlCommand cmd = new SqlCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@idgame", gameId);
-
-                cmd.ExecuteNonQuery();
-
-                this.Close();
-            }
-        }
-
         private void btnCon_Click(object sender, EventArgs e)
         {
             string nome = "", gamePic = "";
-            int genId = 0;
+            double preco = 0;
 
             nome = txtNome.Text;
 
             HttpVerify httpVerify = new HttpVerify();
             gamePic = httpVerify.Verify(txtImage.Text);
 
-            genId = (int)((DataRowView)comboGen.SelectedItem)["IdGenero"];
+            preco = Convert.ToDouble(txtPreco.Text);
 
 
             using (SqlConnection conn = new SqlConnection(_connectionString))
@@ -110,11 +87,11 @@ namespace projeto
                     {
                         conn.Open();
 
-                        string query = "UPDATE JogosColecao SET Titulo=@nome, GamePic=@gamepic, Genero=@genId WHERE IdJogos = (@idgame)";
+                        string query = "UPDATE Whislist SET Titulo=@nome, GamePic=@gamepic, Preco=@preco WHERE IdWhislist = (@idgame)";
                         SqlCommand cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@nome", nome);
                         cmd.Parameters.AddWithValue("@gamepic", gamePic);
-                        cmd.Parameters.AddWithValue("@genId", genId);
+                        cmd.Parameters.AddWithValue("@preco", Convert.ToDecimal(preco));
                         cmd.Parameters.AddWithValue("@idgame", gameId);
 
                         SqlDataReader dr = cmd.ExecuteReader();
@@ -128,6 +105,30 @@ namespace projeto
 
                 }
             }
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(_connectionString))
+            {
+                //MessageBox.Show($"{gameId}");
+                conn.Open();
+                string query = "DELETE FROM Whislist WHERE IdWhislist = (@idgame)";
+
+
+                SqlCommand cmd = new SqlCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@idgame", gameId);
+
+                cmd.ExecuteNonQuery();
+
+                this.Close();
+            }
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
