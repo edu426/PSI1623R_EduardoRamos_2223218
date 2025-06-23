@@ -83,6 +83,8 @@ namespace projeto
                     {
                         MessageBox.Show("Valores Inválidos!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    else if (preco > 100) throw new Exception("O valor do preço é demasiado grande!");
+                    else if (preco < 0) throw new Exception("O valor do preço é demasiado pequeno!");
                     else
                     {
                         conn.Open();

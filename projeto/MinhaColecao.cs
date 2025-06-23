@@ -15,7 +15,7 @@ namespace projeto
     public partial class MinhaColecao : Form
     {
         private static string _connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=collection;Trusted_Connection=True;TrustServerCertificate=True";
-        private int passiveLoop = 6, userId = 0, page = 1;
+        private int passiveLoop = 6, userId = 0, page = 1, editcounter = 0;
         private double games = 0;
 
         private string plataform(int plataforma)
@@ -386,7 +386,7 @@ namespace projeto
         private void btnEdit3_Click(object sender, EventArgs e)
         {
             {
-                int gameNb = 8;
+                int gameNb = 8 + editcounter;
                 gameNb -= passiveLoop;
 
                 this.Hide();
@@ -404,7 +404,7 @@ namespace projeto
         private void btnEdit4_Click(object sender, EventArgs e)
         {
             {
-                int gameNb = 9;
+                int gameNb = 9 + editcounter;
                 gameNb -= passiveLoop;
 
                 this.Hide();
@@ -422,7 +422,7 @@ namespace projeto
         private void btnEdit5_Click(object sender, EventArgs e)
         {
             {
-                int gameNb = 10;
+                int gameNb = 10 + editcounter;
                 gameNb -= passiveLoop;
 
                 this.Hide();
@@ -440,7 +440,7 @@ namespace projeto
         private void btnEdit6_Click(object sender, EventArgs e)
         {
             {
-                int gameNb = 11;
+                int gameNb = 11 + editcounter;
                 gameNb -= passiveLoop;
 
                 this.Hide();
@@ -463,7 +463,7 @@ namespace projeto
         private void btnEdit2_Click(object sender, EventArgs e)
         {
             {
-                int gameNb = 7;
+                int gameNb = 7 + editcounter;
                 gameNb -= passiveLoop;
 
                 this.Hide();
@@ -480,7 +480,7 @@ namespace projeto
 
         private void btnEdit1_Click_1(object sender, EventArgs e)
         {
-            int gameNb = 6;
+            int gameNb = 6 + editcounter;
             gameNb -= passiveLoop;
 
             this.Hide();
@@ -496,9 +496,10 @@ namespace projeto
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            if (passiveLoop > 0)
+            if (passiveLoop > 6)
             {
                 passiveLoop -= 6;
+                editcounter -= 12;
                 page--;
                 lblPage.Text = page.ToString();
                 gameRefresh();
@@ -511,6 +512,7 @@ namespace projeto
             if (passiveLoop < games)
             {
                 passiveLoop += 6;
+                editcounter += 12;
                 page++;
                 lblPage.Text = page.ToString();
                 gameRefresh();
