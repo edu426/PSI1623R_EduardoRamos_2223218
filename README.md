@@ -1,11 +1,32 @@
+# 🎮 My Collection
+
+Aplicação desenvolvida em Windows Forms que permite aos utilizadores gerir a sua coleção de videojogos e uma wishlist com jogos que pretendem adquirir futuramente.
+
+---
+
+## 📌 Funcionalidades
+
+- 👤 Registo e login de utilizadores
+- 🗃️ Adição, edição e remoção de jogos na coleção
+- ⭐ Gestão separada da wishlist
+- 📷 Suporte para imagens dos jogos
+- 🔐 Validação de links e dados
+
+---
+
+## 🖼️ Interface
+
 <p align="center">
-  <img src="source/MyCollection-removebg-preview.png" width="400" height="250">
+  <img src="assets/MainNumbers.png" width="400"/>
+  <img src="assets/MyCollection_Login.png" width="400"/>
 </p>
 
-### Bem vindo a My collection 🎮
+---
 
-O projeto "My Collection" é numa aplicação que permite que o utilizador tenha, num só local, uma lista com todos os seus jogos, independentemente da plataforma.
+## 🧰 Tecnologias utilizadas
 
-<p align="center">
-  <img src="source/MyCollection_Login.png" width="450" height="400">
-</p>
+- 💻 **C#** – linguagem de programação principal
+- 🎨 **Guna UI2** – biblioteca de componentes visuais modernos
+- 🗃️ **SQL Server LocalDB** – base de dados local
+- 🧱 **Windows Forms** – interface da aplicação
+- 🧠 **.NET Framework 4.0**
