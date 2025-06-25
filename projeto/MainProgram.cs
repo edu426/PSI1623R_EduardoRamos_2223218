@@ -41,8 +41,8 @@ namespace projeto
             InitializeComponent();
             id = idNumber;
 
-            
-            using (SqlConnection conn = new SqlConnection(_connectionString))
+            //Função não utilizada na Versão Final (Ver Manual do Utilizador)
+            /*using (SqlConnection conn = new SqlConnection(_connectionString))
             {
                 conn.Open();
 
@@ -75,8 +75,11 @@ namespace projeto
                     lblNewAdd.Hide();
                 }
 
+            }*/
 
-            }
+            picNewAdd.Hide();
+            label1.Hide();
+            lblNewAdd.Hide();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

@@ -361,7 +361,7 @@
     <None Include="Resources\seta_invertida.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\..\..\source\repos\PSI1623R_EduardoRamos_2223218\gunaPath\Guna.UI2.dll" />
+    <Analyzer Include="..\gunaPath\Guna.UI2.dll"/>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

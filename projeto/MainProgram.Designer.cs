@@ -69,7 +69,7 @@
             this.btnPerfil.HoverState.Parent = this.btnPerfil;
             this.btnPerfil.Image = global::projeto.Properties.Resources.user;
             this.btnPerfil.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnPerfil.Location = new System.Drawing.Point(55, 356);
+            this.btnPerfil.Location = new System.Drawing.Point(217, 359);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.ShadowDecoration.Parent = this.btnPerfil;
             this.btnPerfil.Size = new System.Drawing.Size(400, 67);
@@ -110,7 +110,7 @@
             this.btnDesejo.HoverState.Parent = this.btnDesejo;
             this.btnDesejo.Image = global::projeto.Properties.Resources.wishlist;
             this.btnDesejo.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDesejo.Location = new System.Drawing.Point(55, 271);
+            this.btnDesejo.Location = new System.Drawing.Point(217, 273);
             this.btnDesejo.Name = "btnDesejo";
             this.btnDesejo.ShadowDecoration.Parent = this.btnDesejo;
             this.btnDesejo.Size = new System.Drawing.Size(400, 67);
@@ -128,7 +128,7 @@
             this.btnAdd.HoverState.Parent = this.btnAdd;
             this.btnAdd.Image = global::projeto.Properties.Resources.add;
             this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(55, 180);
+            this.btnAdd.Location = new System.Drawing.Point(217, 176);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.ShadowDecoration.Parent = this.btnAdd;
             this.btnAdd.Size = new System.Drawing.Size(400, 67);
@@ -146,7 +146,7 @@
             this.btnColecao.HoverState.Parent = this.btnColecao;
             this.btnColecao.Image = global::projeto.Properties.Resources.game_controller;
             this.btnColecao.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnColecao.Location = new System.Drawing.Point(55, 85);
+            this.btnColecao.Location = new System.Drawing.Point(217, 85);
             this.btnColecao.Name = "btnColecao";
             this.btnColecao.ShadowDecoration.Parent = this.btnColecao;
             this.btnColecao.Size = new System.Drawing.Size(400, 67);
@@ -180,15 +180,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(817, 500);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNewAdd);
-            this.Controls.Add(this.picNewAdd);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.close);
             this.Controls.Add(this.btnDesejo);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnColecao);
+            this.Controls.Add(this.picNewAdd);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblNewAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainProgram";
             this.Text = "MainProgram";
