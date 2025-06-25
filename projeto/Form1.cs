@@ -27,7 +27,7 @@ namespace projeto
                 if (Application.OpenForms.OfType<MainProgram>().Any())
                 {
                     this.Close();
-                }
+                }   
                 else
                 {
                     this.Show();

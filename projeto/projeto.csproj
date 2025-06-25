@@ -361,7 +361,10 @@
     <None Include="Resources\seta_invertida.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\gunaPath\Guna.UI2.dll"/>
+    <Analyzer Include="..\gunaPath\Guna.UI2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MyCollection-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

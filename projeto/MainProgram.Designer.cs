@@ -31,33 +31,46 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainProgram));
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.picNewAdd = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblNewAdd = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnPerfil = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.close = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnDesejo = new Guna.UI2.WinForms.Guna2Button();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.btnColecao = new Guna.UI2.WinForms.Guna2Button();
-            this.lblNewAdd = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.picNewAdd)).BeginInit();
+            this.picNewAdd = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNewAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
-            // picNewAdd
+            // lblNewAdd
             // 
-            this.picNewAdd.Location = new System.Drawing.Point(551, 85);
-            this.picNewAdd.Name = "picNewAdd";
-            this.picNewAdd.ShadowDecoration.Parent = this.picNewAdd;
-            this.picNewAdd.Size = new System.Drawing.Size(201, 271);
-            this.picNewAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picNewAdd.TabIndex = 18;
-            this.picNewAdd.TabStop = false;
+            this.lblNewAdd.AutoSize = true;
+            this.lblNewAdd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewAdd.Location = new System.Drawing.Point(602, 389);
+            this.lblNewAdd.Name = "lblNewAdd";
+            this.lblNewAdd.Size = new System.Drawing.Size(72, 30);
+            this.lblNewAdd.TabIndex = 19;
+            this.lblNewAdd.Text = "label1";
+            this.lblNewAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(572, 359);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 30);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "Ultima Adição:";
             // 
             // btnPerfil
             // 
@@ -79,11 +92,13 @@
             // 
             // guna2PictureBox1
             // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.Location = new System.Drawing.Point(-23, 0);
+            this.guna2PictureBox1.InitialImage = global::projeto.Properties.Resources.MyCollection_removebg_preview;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(299, 0);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.ShadowDecoration.Parent = this.guna2PictureBox1;
-            this.guna2PictureBox1.Size = new System.Drawing.Size(167, 72);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(166, 72);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.guna2PictureBox1.TabIndex = 16;
             this.guna2PictureBox1.TabStop = false;
@@ -154,26 +169,26 @@
             this.btnColecao.Text = "Minha Coleção";
             this.btnColecao.Click += new System.EventHandler(this.btnColecao_Click);
             // 
-            // lblNewAdd
+            // picNewAdd
             // 
-            this.lblNewAdd.AutoSize = true;
-            this.lblNewAdd.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNewAdd.Location = new System.Drawing.Point(602, 389);
-            this.lblNewAdd.Name = "lblNewAdd";
-            this.lblNewAdd.Size = new System.Drawing.Size(72, 30);
-            this.lblNewAdd.TabIndex = 19;
-            this.lblNewAdd.Text = "label1";
-            this.lblNewAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.picNewAdd.Location = new System.Drawing.Point(551, 85);
+            this.picNewAdd.Name = "picNewAdd";
+            this.picNewAdd.ShadowDecoration.Parent = this.picNewAdd;
+            this.picNewAdd.Size = new System.Drawing.Size(201, 271);
+            this.picNewAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNewAdd.TabIndex = 18;
+            this.picNewAdd.TabStop = false;
             // 
-            // label1
+            // guna2PictureBox2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(572, 359);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 30);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "Ultima Adição:";
+            this.guna2PictureBox2.Image = global::projeto.Properties.Resources.ChatGPT_Image_29_05_2025__11_37_13;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(-2, 0);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.ShadowDecoration.Parent = this.guna2PictureBox2;
+            this.guna2PictureBox2.Size = new System.Drawing.Size(295, 499);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox2.TabIndex = 21;
+            this.guna2PictureBox2.TabStop = false;
             // 
             // MainProgram
             // 
@@ -189,13 +204,15 @@
             this.Controls.Add(this.picNewAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNewAdd);
+            this.Controls.Add(this.guna2PictureBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainProgram";
             this.Text = "MainProgram";
             this.Load += new System.EventHandler(this.MainProgram_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picNewAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNewAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,10 +224,11 @@
         private Guna.UI2.WinForms.Guna2Button btnDesejo;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2PictureBox close;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnPerfil;
         private Guna.UI2.WinForms.Guna2PictureBox picNewAdd;
         private System.Windows.Forms.Label lblNewAdd;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }
